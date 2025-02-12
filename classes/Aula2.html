@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //laços de repetição
+        // -for
+        // -while
+        // -do while
+
+        //for
+        for(let i=10; i>0; i--){
+            console.log('número', i)
+        }
+
+        // while
+        let contador = 100
+        while(contador > 0 ){
+            console.log("Contador: ", contador)
+            contador = contador - 10
+        }
+
+        //do while: quando quero que uma instrução seja executada pelo menos uma vez
+        let a=1;
+        do{
+            if(a%2==0){
+                document.write(a)
+            }
+            else{
+                document.write(a)
+            }
+            a++
+        }while(a <= 20)
+
+        //switch case:
+        let operacoes = Number(prompt("escolha sua operação | Soma = 1 | Subtração = 2 | Multiplicação = 3 |  Divisão = 4|"))
+        let num1 = Number(prompt("Digite o primeiro número: "))
+        let num2 = Number(prompt("Digite o segundo número: "))
+
+        switch(operacoes){
+            case 1:
+                soma = num1+num2
+                document.write(`A soma é ${soma}`)
+                break;
+            case 2:
+                subtracao = num1-num2
+                document.write(`A subtracao é ${subtracao}`)
+                break;
+            case 3:
+                mult = num1*num2
+                document.write(`A mult é ${subtracao}`)
+                break;
+            case 4:
+                divisao = num1/num2
+                document.write(`A divisão é ${subtracao}`)
+                break;
+            default:
+                document.write("Opção invlalida!")
+        }
+    </script>
+</body>
+</html>

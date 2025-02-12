@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<body>
+    <script>
+        // ex 03: Solicite 2 notas, e veja se o 1 é múltiplo do segundo. (ex. 9 é múltiplo de 3)
+
+        let num1 = Number( window.prompt("Digite o 1° número: "));
+        let num2 = Number( window.prompt("Digite o 2° número: "));
+
+        if(num1%num2==0){
+            document.write(`<h1>${num1} é multiplo ${num2}</h1>`);
+        }else{
+            document.write(`<h1>${num1} não é multiplo${num2}</h1>`);
+        }
+    </script>
+</body>
+</html>
