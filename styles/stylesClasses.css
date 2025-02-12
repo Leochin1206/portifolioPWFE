@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.linksNavBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 95px;
+    background-color: white;
+    box-shadow: 0px 4px 2px #0000001a;
+}
+
+.linksNavBar img {
+    width: 40px;
+    height: 40px;
+}
+
+.linksNavBar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-decoration: none;
+    color: #7209b7;
+    transition-duration: 0.3s;
+    gap: 5px; 
+}
+
+.iconNavBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    width: 100%;
+    background-color: white;
+    color: #7209b7;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    box-shadow: 0px -4px 10px #0000001a;
+}
+
+.aulas{
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10%;
+}
+
+.aula{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aula img{
+    width: 230px;
+    border-radius: 5px;
+    border: solid 3px #7209b7;
+}
+
