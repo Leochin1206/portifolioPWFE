@@ -29,7 +29,7 @@
     </header>
     <main>
         <div class="finalResult">
-            <h1>Resultado</h1>
+            <h1>Result</h1>
             <h2 id="result"></h2>
         </div>
         <div class="nextExercise">
@@ -38,19 +38,19 @@
         </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2025 Leonardo A. Viana - Todos os direitos reservados.</p>
+        <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
     </footer>
 </body>
     <script>
         // ex 03: Solicite 2 notas, e veja se o 1 é múltiplo do segundo. (ex. 9 é múltiplo de 3)
 
-        let num1 = Number( window.prompt("Digite o 1° número: "));
-        let num2 = Number( window.prompt("Digite o 2° número: "));
+        let num1 = Number( window.prompt("Enter the 1st number: "));
+        let num2 = Number( window.prompt("Enter the 2st number: "));
 
         if(num1%num2==0){
-            document.getElementById("result").innerHTML =`${num1} é multiplo ${num2}`;
+            document.getElementById("result").innerHTML =`${num1} is a multiple of  ${num2}`;
         }else{
-            document.getElementById("result").innerHTML =`${num1} não é multiplo ${num2}`;
+            document.getElementById("result").innerHTML =`${num1} is not a multiple of  ${num2}`;
         }
     </script>
 </html>

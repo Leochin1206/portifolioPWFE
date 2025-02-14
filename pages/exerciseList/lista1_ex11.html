@@ -30,7 +30,7 @@
     <main>
         <div class="finalResult">
             <div class="align">
-                <h1>Resultado</h1>
+                <h1>Result</h1>
                 <h2 id="result"></h2>
             </div>
         </div>
@@ -40,40 +40,40 @@
         </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2025 Leonardo A. Viana - Todos os direitos reservados.</p>
+        <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
     </footer>
 </body>
     <script>
         // ex 11: Neste exercício, você vai simular um jogo de "Pedra, papel e tesoura" contra o computador
 
-        let userChoose = window.prompt("Escolha -> [Pedra] [Papel] [Tesoura]: ");
+        let userChoose = window.prompt("Chooese -> [Rock] [Paper] [Scissor]: ");
 
-        const options = ["Pedra", "Papel", "Tesoura"];
+        const options = ["Rock", "Paper", "Scissor"];
         const computerChoose = options[Math.floor(Math.random() * 3)];
 
         let result = "";
 
         if (userChoose === computerChoose) {
 
-            result = "Empate!";
+            result = "Draw!";
 
         } 
         else if (
-                (userChoose === "Pedra" && computerChoose === "Tesoura") ||
-                (userChoose === "Papel" && computerChoose === "Pedra") ||
-                (userChoose === "Tesoura" && computerChoose === "Papel")
+                (userChoose === "Rock" && computerChoose === "Scissor") ||
+                (userChoose === "Paper" && computerChoose === "Rock") ||
+                (userChoose === "Scissor" && computerChoose === "Paper")
             ) {
 
-                result = "Você venceu!";
+                result = "You Win!";
 
         } 
         else {
 
-            result = "Você perdeu!";
+            result = "You Lose!";
 
         }
 
-        document.getElementById("result").innerHTML =`Computador >>> ${computerChoose}<br>Você >>> ${userChoose}<br><br>Resultado = ${result}`;
+        document.getElementById("result").innerHTML =`Computer >>> ${computerChoose}<br>You >>> ${userChoose}<br><br>Result = ${result}`;
     </script>
 </html>
         

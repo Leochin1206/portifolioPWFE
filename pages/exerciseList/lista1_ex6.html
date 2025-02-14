@@ -30,7 +30,7 @@
     <main>
         <div class="finalResult">
             <div class="align">
-                <h1>Resultado</h1>
+                <h1>Result</h1>
                 <h2 id="result"></h2>
             </div>
         </div>
@@ -40,14 +40,14 @@
         </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2025 Leonardo A. Viana - Todos os direitos reservados.</p>
+        <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
     </footer>
 </body>
     <script>
         // ex 06: Solicite duas notas ao usuário e informe se está acima da média, e se é uma nota par, e mostre o resultado ao usuário
 
-        let nota1 = parseFloat(window.prompt("Digite a 1° Nota: "));
-        let nota2 = parseFloat(window.prompt("Digite a 2° Nota: "));
+        let nota1 = parseFloat(window.prompt("Enter the 1st grade: "));
+        let nota2 = parseFloat(window.prompt("Enter the 2st grade: "));
 
         let media = (nota1+nota2)/2;
         let parimpar;
@@ -64,15 +64,15 @@
 
         if(media>= 6 && media <= 10){
 
-            document.getElementById("result").innerHTML =`Você foi Aprovado!<br>Média = ${media} || Sua média é ${parimpar}`;
+            document.getElementById("result").innerHTML =`You passed!<br>Average = ${media} || Your average is ${parimpar}`;
 
         }else if(media < 6 && media > 0){
 
-            document.getElementById("result").innerHTML =`Você foi Reprovado!<br>Média = ${media} || Sua média é ${parimpar}`;
+            document.getElementById("result").innerHTML =`You failed!<br>Average = ${media} || Your average is ${parimpar}`;
 
         }else{
 
-            document.getElementById("result").innerHTML =`Você digitou valores inválidos, tente novamente!`;
+            document.getElementById("result").innerHTML =`You entered invalid values, please try again!`;
 
         }
     </script>

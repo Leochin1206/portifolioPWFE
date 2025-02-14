@@ -29,7 +29,7 @@
     </header>
     <main>
         <div class="finalResult">
-            <h1>Resultado</h1>
+            <h1>Result</h1>
             <h2 id="result"></h2>
         </div>
         <div class="nextExercise">
@@ -38,18 +38,18 @@
         </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2025 Leonardo A. Viana - Todos os direitos reservados.</p>
+        <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
     </footer>
 </body>
     <script>
          // ex 08: Verifique se um ano é bissexto
 
-        let year = Number(window.prompt("Digite o Ano: "));
+        let year = Number(window.prompt("Enter a year: "));
 
         if(year % 4 == 0){
-            document.getElementById("result").innerHTML =`O ano é bissexto!`;
+            document.getElementById("result").innerHTML =`${year} is a leap year!`;
         }else{
-            document.getElementById("result").innerHTML =`O ano não é bissexto!`;
+            document.getElementById("result").innerHTML =`${year} isn't a leap year!`;
         }
     </script>
 </html>

@@ -29,7 +29,7 @@
     </header>
     <main>
         <div class="finalResult">
-            <h1>Resultado</h1>
+            <h1>Result</h1>
             <h2 id="result"></h2>
         </div>
         <div class="nextExercise">
@@ -38,18 +38,18 @@
         </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2025 Leonardo A. Viana - Todos os direitos reservados.</p>
+        <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
     </footer>
 </body>
     <script>
         // ex 09: Solicite ao usuário uma taxa de câmbio, e um valor desejado, exiba quanto ficaria esse valor convertido com a taxa
 
-        let value = parseFloat(window.prompt("Digite o Valor a ser convertido: "));
-        let tax = parseFloat(window.prompt("Digite a taxa de câmbio: "));
+        let value = parseFloat(window.prompt("Enter the value to be converted: "));
+        let tax = parseFloat(window.prompt("Enter the exchange rate:"));
 
         let result = value + (value * (tax / 100))
 
-        document.getElementById("result").innerHTML =`R$ ${value.toFixed(2)} com taxa de ${tax.toFixed(2)}% = $${result.toFixed(2)}`;
+        document.getElementById("result").innerHTML =`R$ ${value.toFixed(2)} with a ${tax.toFixed(2)}% = $${result.toFixed(2)}`;
     </script>
 </html>
         

@@ -30,7 +30,7 @@
     <main>
         <div class="finalResult">
             <div class="align">
-                <h1>Resultado</h1>
+                <h1>Result</h1>
                 <h2 id="result"></h2>
             </div>
         </div>
@@ -40,29 +40,29 @@
         </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2025 Leonardo A. Viana - Todos os direitos reservados.</p>
+        <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
     </footer>
 </body>
     <script>
         // ex 07: Solicite o peso e a altura de uma pessoa e calcule o IMC( peso/altura²). Apresente o resultado ao usuário
 
-        let height = parseFloat(window.prompt("Digite a sua Altura(m): ").replace(",", "."));
-        let weight = parseFloat(window.prompt("Digite o seu Peso: ").replace(",", "."));
+        let height = parseFloat(window.prompt("Enter your height (m): ").replace(",", "."));
+        let weight = parseFloat(window.prompt("Enter your weight: ").replace(",", "."));
 
         let imc = weight / (height*height);
 
         let state = "";
 
         if(imc < 18.5){
-            state = "Magreza"
+            state = "Thinness"
         }else if(imc >= 18.5 && imc < 24.9){
             state = "Normal"
         }else if(imc >= 25 && imc < 29.9){
-            state = "Sobrepeso"
+            state = "Overweight"
         }else if(imc >= 30 && imc < 39.9){
-            state = "Obesidade"
+            state = "Obesity"
         }else if(imc >= 40){
-            state = "Obesidade Grave"
+            state = "Severe Obesity"
         }      
         
         document.getElementById("result").innerHTML =`IMC = ${imc.toFixed(2)}<br>Classificação = ${state}`;

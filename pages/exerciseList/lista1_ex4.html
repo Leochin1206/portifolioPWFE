@@ -29,7 +29,7 @@
     </header>
     <main>
         <div class="finalResult">
-            <h1>Resultado</h1>
+            <h1>Result</h1>
             <h2 id="result"></h2>
         </div>
         <div class="nextExercise">
@@ -38,13 +38,13 @@
         </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2025 Leonardo A. Viana - Todos os direitos reservados.</p>
+        <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
     </footer>
 </body>
     <script>
         // ex 04: Converta uma temperatura em celsius para Fahrenheit (ºc*9/5)+32
 
-        let celsius = Number( window.prompt("Digite a Temperatura em celsius: "));
+        let celsius = Number( window.prompt("Enter the temperature in Celsius: "));
         let fahrenheit = (celsius * 9/5) + 32;
         document.getElementById("result").innerHTML =`${celsius}°C = ${fahrenheit.toFixed(2)}°F`;
     </script>
