@@ -30,7 +30,7 @@
     <main>
         <div class="finalResult">
             <h1>Resultado</h1>
-            <h2 id="result"></h2>aa
+            <h2 id="result"></h2>
         </div>
         <div class="nextExercise">
             <a href="./lista1_ex7.html">Previous</a>
@@ -44,7 +44,13 @@
     <script>
          // ex 08: Verifique se um ano é bissexto
 
-        document.getElementById("result").innerHTML =``;
+        let year = Number(window.prompt("Digite o Ano: "));
+
+        if(year % 4 == 0){
+            document.getElementById("result").innerHTML =`O ano é bissexto!`;
+        }else{
+            document.getElementById("result").innerHTML =`O ano não é bissexto!`;
+        }
     </script>
 </html>
        

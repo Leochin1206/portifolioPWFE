@@ -30,7 +30,7 @@
     <main>
         <div class="finalResult">
             <h1>Resultado</h1>
-            <h2 id="result"></h2>aa
+            <h2 id="result"></h2>
         </div>
         <div class="nextExercise">
             <a href="./lista1_ex8.html">Previous</a>
@@ -44,7 +44,12 @@
     <script>
         // ex 09: Solicite ao usuário uma taxa de câmbio, e um valor desejado, exiba quanto ficaria esse valor convertido com a taxa
 
-        document.getElementById("result").innerHTML =``;
+        let value = parseFloat(window.prompt("Digite o Valor a ser convertido: "));
+        let tax = parseFloat(window.prompt("Digite a taxa de câmbio: "));
+
+        let result = value + (value * (tax / 100))
+
+        document.getElementById("result").innerHTML =`R$ ${value.toFixed(2)} com taxa de ${tax.toFixed(2)}% = $${result.toFixed(2)}`;
     </script>
 </html>
         

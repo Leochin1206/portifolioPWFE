@@ -29,8 +29,10 @@
     </header>
     <main>
         <div class="finalResult">
-            <h1>Resultado</h1>
-            <h2 id="result"></h2>aa
+            <div class="align">
+                <h1>Resultado</h1>
+                <h2 id="result"></h2>
+            </div>
         </div>
         <div class="nextExercise">
             <a href="./lista1_ex10.html">Previous</a>
@@ -44,7 +46,34 @@
     <script>
         // ex 11: Neste exercício, você vai simular um jogo de "Pedra, papel e tesoura" contra o computador
 
-        document.getElementById("result").innerHTML =``;
+        let userChoose = window.prompt("Escolha -> [Pedra] [Papel] [Tesoura]: ");
+
+        const options = ["Pedra", "Papel", "Tesoura"];
+        const computerChoose = options[Math.floor(Math.random() * 3)];
+
+        let result = "";
+
+        if (userChoose === computerChoose) {
+
+            result = "Empate!";
+
+        } 
+        else if (
+                (userChoose === "Pedra" && computerChoose === "Tesoura") ||
+                (userChoose === "Papel" && computerChoose === "Pedra") ||
+                (userChoose === "Tesoura" && computerChoose === "Papel")
+            ) {
+
+                result = "Você venceu!";
+
+        } 
+        else {
+
+            result = "Você perdeu!";
+
+        }
+
+        document.getElementById("result").innerHTML =`Computador >>> ${computerChoose}<br>Você >>> ${userChoose}<br><br>Resultado = ${result}`;
     </script>
 </html>
         
