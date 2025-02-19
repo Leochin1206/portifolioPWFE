@@ -44,7 +44,7 @@ main{
     align-items: center; 
     justify-content: center;
     text-decoration: none;
-    color: #014f86;
+    color: #4E35A9;
     transition-duration: 0.3s;
     gap: 5px; 
 }
@@ -59,7 +59,7 @@ main{
 .footer {
     width: 100%;
     background-color: white;
-    color: #014f86;
+    color: #4E35A9;
     font-weight: 600;
     text-align: center;
     padding: 10px 0;
