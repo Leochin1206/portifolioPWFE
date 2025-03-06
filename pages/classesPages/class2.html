@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./classPages.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./class2.css" media="screen" />
     <link rel="icon" type="image/png" href="../images/logo2.png">
     <title>Portifolio</title>
 </head>
+
 <body>
     <header>
         <nav>
             <div class="linksNavBar">
                 <div class="iconNavBar">
-                    <a href="../home.html"><img src="../../images/homeIcon.png"/>Home</a>
+                    <a href="../home.html"><img src="../../images/homeIcon.png" />Home</a>
                 </div>
                 <div class="iconNavBar">
-                    <a href="../classes.html"><img src="../../images/schoolIcon.png"/>Classes</a>
+                    <a href="../classes.html"><img src="../../images/schoolIcon.png" />Classes</a>
                 </div>
                 <div class="iconNavBar">
-                    <a href="../exerciseList.html"><img src="../../images/listIcon.png"/>Exercise List</a>
+                    <a href="../exerciseList.html"><img src="../../images/listIcon.png" />Exercise List</a>
                 </div>
                 <div class="iconNavBar">
-                    <a href="../profile.html"><img src="../../images/personIcon.png"/>My Profile</a>
+                    <a href="../profile.html"><img src="../../images/personIcon.png" />My Profile</a>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <div>
-            <h2>Teoria das cores</h2>
-            <p>
-              Nesta aula, iniciamos falando de teoria das cores e como cada
-              cor pode influenciar a visão do usuário sobre o site.<br />
-              Sobre a escolha da paleta de cores, vimos exemplos como: cores
-              complementares, cores análogas, cores triádicas e etc.
-            </p>
+        <div class="topics">
+            <div class="firstTopic">
+                <h1>Color Theory</h1>
 
-            <h2>10 heurísticas de Nielsen</h2>
-            <p>
-              As 10 heurísticas de Nielsen sçao diretrizes que ajudam a
-              avaliar a usabilidade de interfaces digitais. São elas:
-              1 - Mantenha o status visível: informar o que está acontecendo ao usuário;
-              2 - Tenha proximidade do mundo real: fazer de forma natural e lógica. Escolher a comunicação usando elementos que façam parte do dia a dia das pessoas;
-              3 - Exercer o controle sem tirar a liberdade: direcione o usuário para ajudá-lo a cumprir com sua tarefa, mas sem tirar suas opções;
-              4 - Mantenha consistência e padrões: convencer o usuário das decisões que ele deve tomar;
-              5 - Trabalhar na prevenção de erros;
-              6 - Criar reconhecimento: deixar claro o passo a passo de uso do site; 
-              7 - Flexibilidade e eficiência de uso: a usabilidade deve ser boa para qualquer pessoa que resolver acessar o produto;
-              8 - Design minimalista: telas simples que contenham somente o que o usuário realmente precisa saber ou fazer;
-              9 - Ajude a reconhecer, diagnosticar e consertar erros: mensagens de erro claras, de maneira que o erro cometido seja consertado rapidamente;
-              10 - Documentação e ajuda: Tudo em seu site pode ser feito de forma intuitiva, mas em alguns casos é preciso oferecer informação ou ajuda.
-            </p>
+                <p>In this lesson, we explore Color Theory and its impact on users' visual perception in 
+                    websites. We discussed how carefully choosing colors can significantly influence user 
+                    experience, conveying feelings such as trust, urgency, or tranquility. Additionally, 
+                    we covered color psychology, analyzing how different shades can evoke emotions and 
+                    affect decision-making. These principles not only enhance visual aesthetics but also 
+                    improve accessibility and usability in design projects.</p>
+
+                <div class="imagesFistTopic">
+                    <img src="../../images/teoriadascores1.jpeg">
+                    <img src="../../images/teoriadascores2.jpeg">
+                    <img src="../../images/teoriadascores3.jpeg">
+                </div>
+            </div>
+
+            <div class="secondTopic">
+                <h1>Nielsen's 10 Heuristics</h1>
+                <div class="nilsen">    
+                    <p id="descriptionTopic">In this lesson, we explore Nielsen's 10 heuristics, a set 
+                        of fundamental guidelines for evaluating and improving the usability of digital 
+                        interfaces. These heuristics help develop more intuitive, efficient, and accessible 
+                        interfaces for users</p>
+
+                    <p><span>01 - Visibility of system status:</span> The interface should always keep the user informed about what is happening by providing timely and appropriate feedback.</p>
+                    <p><span>02 - Match between system and the real world:</span> Communication should be clear and intuitive, using elements and terms familiar to the user to make interactions more natural.</p>
+                    <p><span>03 - User control and freedom:</span> The design should allow users to have control over their actions, including options to undo or redo actions easily.</p>
+                    <p><span>04 - Consistency and standards:</span> Maintaining visual and functional consistency prevents confusion, allowing users to understand and use the system without having to relearn basic interactions.</p>
+                    <p><span>05 - Error prevention:</span> The design should minimize the likelihood of errors by offering suggestions, validations, and preventing incorrect actions before they happen.</p>
+                    <img src="../../images/heuristics.jpg">
+                    <p><span>06 - Recognition rather than recall:</span> Users should not have to remember information from one screen to another. Visible elements and clear instructions help guide navigation.</p>
+                    <p><span>07 - Flexibility and efficiency of use:</span> The interface should be accessible to both novice and advanced users, allowing shortcuts and customizations for greater efficiency.</p>
+                    <p><span>08 - Aesthetic and minimalist design:</span> Interfaces should display only essential information, avoiding unnecessary elements that may distract or overwhelm the user.</p>
+                    <p><span>09 - Help users recognize, diagnose, and recover from errors:</span> Error messages should be clear and guide the user in resolving the issue efficiently.</p>
+                    <p><span>10 - Help and documentation:</span> Although a well-designed system should be intuitive, providing support or documentation is essential to ensure users can easily find assistance when needed.</p>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="footer">
         <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
     </footer>
 </body>
+
 </html>

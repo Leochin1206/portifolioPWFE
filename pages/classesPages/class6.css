@@ -1,0 +1,42 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: 75%;
+    padding: 2%;
+    height: 67%;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.message:hover{
+    transform: scale(1.03);
+}
+
+.message p{
+    width: 95%;
+    text-align: center;
+}
+
+.imagesFistTopic{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    gap: 2%;
+}
+
+.imagesFistTopic img{
+    width: 300px;
+    height: auto;
+    margin-top: 2%;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./classPages.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./class4.css" media="screen" />
     <link rel="icon" type="image/png" href="../images/logo2.png">
     <title>Portifolio</title>
 </head>
@@ -27,64 +28,88 @@
         </nav>
     </header>
     <main>
-        <div>
-            <p>
-                //laços de repetição
-        // -for
-        // -while
-        // -do while
+            <div class="topicRepetition1">
+                <h1>For</h1>
+                <p>In JavaScript, the for loop is used to execute a block of code multiple times 
+                    based on a condition. It consists of three parts: initialization, condition, and 
+                    increment/decrement. It is commonly used for iterating over arrays or executing a 
+                    specific number of repetitions.</p>
 
-        //for
-        for(let i=10; i>0; i--){
-            console.log('número', i)
-        }
+                <div class="exampleFor">
+                    <p>for( <span id="blue">let</span> <span id="white"> i</span> = <span id="red">10</span>; <span id="white">i</span> > <span id="red">0</span>; <span id="white"> i</span>-- ){</p>
+                    <p id="tab1"><span id="purple">console</span>.<span id="red">log</span>(<span id="greenStr">'number'</span>, <span id="white"> i</span>)</p>
+                    <p>}</p>
+                </div>
 
-        // while
-        let contador = 100
-        while(contador > 0 ){
-            console.log("Contador: ", contador)
-            contador = contador - 10
-        }
+                <span></span>
+            </div>
 
-        //do while: quando quero que uma instrução seja executada pelo menos uma vez
-        let a=1;
-        do{
-            if(a%2==0){
-                document.write(a)
-            }
-            else{
-                document.write(a)
-            }
-            a++
-        }while(a <= 20)
+            <div class="topicRepetition2">
+                <h1>While</h1>
+                <p>In JavaScript, the while loop repeatedly executes a block of code as long as a 
+                    specified condition remains true. It is useful when the number of iterations is 
+                    not fixed and depends on a dynamic condition.</p>
 
-        //switch case:
-        let operacoes = Number(prompt("escolha sua operação | Soma = 1 | Subtração = 2 | Multiplicação = 3 |  Divisão = 4|"))
-        let num1 = Number(prompt("Digite o primeiro número: "))
-        let num2 = Number(prompt("Digite o segundo número: "))
+                <div class="exampleWhile">
+                    <p><span id="blue">let</span> <span id="white">cont</span> = <span id="red">100</span></p>
+                    <p>while(<span id="white">cont</span> > <span id="red">0</span> ){</p>
+                    <p id="tab1"><span id="purple">console</span>.<span id="red">log</span>(<span id="greenStr">"cont: "</span>, <span id="white">cont</span>)</p>
+                    <p id="tab1"><span id="white">cont</span> = <span id="white">cont</span> - <span id="red">10</span></p>
+                    <p>}</p>
+                </div>
+            </div>
 
-        switch(operacoes){
-            case 1:
-                soma = num1+num2
-                document.write(`A soma é ${soma}`)
-                break;
-            case 2:
-                subtracao = num1-num2
-                document.write(`A subtracao é ${subtracao}`)
-                break;
-            case 3:
-                mult = num1*num2
-                document.write(`A mult é ${subtracao}`)
-                break;
-            case 4:
-                divisao = num1/num2
-                document.write(`A divisão é ${subtracao}`)
-                break;
-            default:
-                document.write("Opção invlalida!")
-        }
-            </p>
-        </div>
+            <div class="topicRepetition3">
+                <h1>Do While</h1>
+                <p>In JavaScript, the do...while loop executes a block of code at least once, 
+                    regardless of the condition. After the first execution, it continues looping as 
+                    long as the condition remains true. This makes it useful when the code needs to 
+                    run before checking a condition.</p>
+
+                <div class="exampleDoWhile">
+                    <p id="Bottom1"><span id="blue">let</span> <span id="white">a </span> = <span id="red">0</span>;</p>
+                    <p>do{</p>
+                    <p id="tab1">if(<span id="white"> a</span> % <span id="red">2 </span> == <span id="red">0 </span>){</p>
+                    <p id="tab2"><span id="purple">document</span>.<span id="red">write</span>(<span id="white"> a </span>)</p>
+                    <p id="tab1">}</p>
+                    <p id="tab1"><span id="white">a</span>++</p>
+                    <p>}while(<span id="white">a</span> <= <span id="red">20</span>)</p>
+                </div>
+            </div>
+
+            <div class="topicRepetition4">
+                <h1>Switch Case</h1>
+                <p>In JavaScript, the switch statement is used to execute one of many blocks of code 
+                    based on different possible values of a variable or expression. It is an alternative 
+                    to multiple if...else statements and is particularly useful when dealing with many 
+                    conditions.</p>
+                
+                <div class="exampleSC">
+                    <p><span id="blue">let</span> <span id="white">operations</span> = Number(prompt(<span id="greenStr">"choose you operation | addition = 1 | subtraction = 2 | multiplication  = 3 |  division = 4|"</span>))</p>
+                    <p><span id="blue">let</span> <span id="white">num1</span> = Number(prompt(<span id="greenStr">"Enter with the first number: "</span>))</p>
+                    <p id="Bottom1"><span id="blue">let</span> <span id="white">num2</span> = Number(prompt(<span id="greenStr">"Enter with the second number: "</span>))</p>
+                    <p id="tab1">switch(<span id="white">operations</span>){</p>
+                    <p id="tab2">case <span id="red">1</span>:</p>
+                    <p id="tab3"><span id="white">addition</span> = <span id="white">num1</span> + <span id="white">num2</span></p>
+                    <p id="tab3"><span id="purple">document</span>.<span id="red">write</span>(<span id="green">`Addition result = <span id="yellow">${addition}</span>`</span>)</p>
+                    <p id="tabBottom3">break;</p>
+                    <p id="tab2">case <span id="red">2</span>:</p>
+                    <p id="tab3"><span id="white">subtraction</span> = <span id="white">num1</span> - <span id="white">num2</span></p>
+                    <p id="tab3"><span id="purple">document</span>.<span id="red">write</span>(<span id="green">`Subtraction result = <span id="yellow">${subtraction}</span>`</span>)</p>
+                    <p id="tabBottom3">break;</p>
+                    <p id="tab2">case <span id="red">3</span>:</p>
+                    <p id="tab3"><span id="white">multiplication</span> = <span id="white">num1</span> * <span id="white">num2</span></p>
+                    <p id="tab3"><span id="purple">document</span>.<span id="red">write</span>(<span id="green">`multiplication result = <span id="yellow">${multiplication}</span>`</span>)</p>
+                    <p id="tabBottom3">break;</p>
+                    <p id="tab2">case <span id="red">4</span>:</p>
+                    <p id="tab3"><span id="white">division</span> = <span id="white">num1</span> / <span id="white">num2</span></p>
+                    <p id="tab3"><span id="purple">document</span>.<span id="red">write</span>(<span id="green">`Division result = <span id="yellow">${division}</span>`</span>)</p>
+                    <p id="tabBottom3">break;</p>
+                    <p id="tab2">default:</p>
+                    <p id="tab3"><span id="purple">document</span>.<span id="red">write</span>(<span id="greenStr>"Invalid option!"</span>)</p>
+                    <p>}</p>
+                </div>
+            </div>
     </main>
     <footer class="footer">
         <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>

@@ -1,0 +1,201 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.topic1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 2%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    color: white;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.topic1:hover{
+    transform: scale(1.02);
+}
+
+.topic1 p{
+    margin-top: 1%;
+    font-size: 22px;
+    width: 95%;
+    text-align: justify;
+}
+
+.topic1 #description{
+    font-weight: 550;
+    margin-bottom: 1%;
+}
+
+.topic1 .example{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+    font-size: 26px;
+    color: #ff9e00;
+    width: 40%;
+    background-color: #10002b;
+}
+
+.example span{
+    color: #74c69d;
+}
+
+#let{
+    color: blue;
+}
+
+#name{
+    color: white;
+}
+
+#console{
+    color: darkorchid;
+}
+
+#log{
+    color: red;
+}
+
+#num{
+    color: hotpink;
+}
+
+#comment{
+    color: grey;
+}
+
+#str{
+    color: chartreuse;
+}
+
+#interpolation{
+    color: yellow;
+}
+
+.topic2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 2%;
+    margin-bottom: 2%;
+    color: white;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.topic2:hover{
+    transform: scale(1.02);
+}
+
+.description{
+    width: 95%;
+}
+
+.alinhamento{
+    font-size: 22px;
+    margin-left: 15px;
+    margin-top: 7px;
+}
+
+.exampleVar{
+    margin-top: 2%;
+    padding: 1%;
+    font-size: 26px;
+    color: #ff9e00;
+    width: 40%;
+    background-color: #10002b;
+}
+
+.exampleVar span{
+    color: #74c69d;
+}
+
+.topic3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 2%;
+    margin-bottom: 2%;
+    color: white;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.topic3:hover{
+    transform: scale(1.02);
+}
+
+.topic3 p{
+    margin-top: 1%;
+    font-size: 22px;
+    font-weight: 550;
+    width: 95%;
+    text-align: justify;
+}
+
+.exampleWHTML{
+    margin-top: 2%;
+    padding: 1%;
+    font-size: 26px;
+    color: #ff9e00;
+    width: 40%;
+    background-color: #10002b;
+}
+
+.topic4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 2%;
+    margin-bottom: 2%;
+    color: white;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.topic4:hover{
+    transform: scale(1.02);
+}
+
+.exampleExercise{
+    margin-top: 2%;
+    padding: 1%;
+    font-size: 26px;
+    color: #ff9e00;
+    font-weight: 550;
+    width: 70%;
+    background-color: #10002b; 
+}
+
+.exampleExercise span{
+    color: #74c69d;
+}
+
+#marginComment{
+    color: grey;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#if{
+    margin-top: 15px;
+}
+
+#marginAlert{
+    margin-left: 26px;
+}

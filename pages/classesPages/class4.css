@@ -1,0 +1,204 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.topicRepetition1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 2%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    color: white;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.topicRepetition1:hover{
+    transform: scale(1.02);
+}
+
+.topicRepetition1 p{
+    width: 95%;
+    font-size: 22px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: 550;
+}
+
+.exampleFor{
+    margin-top: 1%;
+    padding: 1%;
+    font-size: 26px;
+    color: #ff9e00;
+    width: 40%;
+    background-color: #10002b;
+}
+
+.topicRepetition2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 2%;
+    margin-bottom: 2%;
+    color: white;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.topicRepetition2:hover{
+    transform: scale(1.02);
+}
+
+.topicRepetition2 p{
+    width: 95%;
+    font-size: 22px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: 550;
+}
+
+.exampleWhile{
+    margin-top: 1%;
+    padding: 1%;
+    font-size: 26px;
+    color: #ff9e00;
+    width: 40%;
+    background-color: #10002b;
+}
+
+.topicRepetition3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 2%;
+    margin-bottom: 2%;
+    color: white;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.topicRepetition3:hover{
+    transform: scale(1.02);
+}
+
+.topicRepetition3 p{
+    width: 95%;
+    font-size: 22px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: 550;
+}
+
+.exampleDoWhile{
+    margin-top: 1%;
+    padding: 1%;
+    font-size: 26px;
+    color: #ff9e00;
+    width: 40%;
+    background-color: #10002b;
+}
+
+.topicRepetition4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 2%;
+    margin-bottom: 2%;
+    color: white;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.topicRepetition4:hover{
+    transform: scale(1.02);
+}
+
+.topicRepetition4 p{
+    width: 95%;
+    font-size: 22px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: 550;
+}
+
+.exampleSC{
+    margin-top: 1%;
+    padding: 1%;
+    font-size: 26px;
+    color: #ff9e00;
+    width: 70%;
+    background-color: #10002b;
+}
+
+#blue{
+    color: blue;
+}
+
+#white{
+    color: white;
+}
+
+#purple{
+    color: darkorchid;
+}
+
+#red{
+    color: red;
+}
+
+#pink{
+    color: hotpink;
+}
+
+#grey{
+    color: grey;
+}
+
+#green{
+    color: chartreuse;
+}
+
+#yellow{
+    color: yellow;
+}
+
+#greenStr{
+    color: #74c69d;
+}
+
+#tab1{
+    margin-left: 5%;
+}
+
+#tab2{
+    margin-left: 10%;
+}
+
+#tab3{
+    margin-left: 15%;
+}
+
+#tabBottom3{
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+
+#Bottom1{
+    margin-bottom: 5%;
+}
+
+#Bottom2{
+    margin-bottom: 10%;
+}

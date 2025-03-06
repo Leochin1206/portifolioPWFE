@@ -1,36 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./classPages.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./class5.css" media="screen" />
     <link rel="icon" type="image/png" href="../images/logo2.png">
     <title>Portifolio</title>
 </head>
+
 <body>
     <header>
         <nav>
             <div class="linksNavBar">
                 <div class="iconNavBar">
-                    <a href="../home.html"><img src="../../images/homeIcon.png"/>Home</a>
+                    <a href="../home.html"><img src="../../images/homeIcon.png" />Home</a>
                 </div>
                 <div class="iconNavBar">
-                    <a href="../classes.html"><img src="../../images/schoolIcon.png"/>Classes</a>
+                    <a href="../classes.html"><img src="../../images/schoolIcon.png" />Classes</a>
                 </div>
                 <div class="iconNavBar">
-                    <a href="../exerciseList.html"><img src="../../images/listIcon.png"/>Exercise List</a>
+                    <a href="../exerciseList.html"><img src="../../images/listIcon.png" />Exercise List</a>
                 </div>
                 <div class="iconNavBar">
-                    <a href="../profile.html"><img src="../../images/personIcon.png"/>My Profile</a>
+                    <a href="../profile.html"><img src="../../images/personIcon.png" />My Profile</a>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        colocar as coisas da pasta 2 aqui
+        <div class="topicFunctions">
+            <h1>Functions</h1>
+            <p>A function in JavaScript is a reusable block of code that performs a specific task. It can
+                accept parameters and return a value. Functions are defined using the function keyword.</p>
+
+            <div class="exampleFunctions">
+                <p>function greet(name) {</p>
+                <p id="tab1">return "Hello, " + name;</p>
+                <p>}</p>
+                <p>console.log(greet("John")); // Output: "Hello, John"</p>
+            </div>
+        </div>
+
+        <div class="topicArrowFunction">
+            <h1>Arrow Function</h1>
+            <p>Arrow functions are a shorter syntax for writing functions. They are defined using the = >
+                operator. Arrow functions do not have their own this context and are often used for shorter
+                functions or callbacks.</p>
+
+            <div class="exampleArrowFunction">
+                <p>const greet = (name) => "Hello, " + name;</p>
+                <p>console.log(greet("John")); // Output: "Hello, John"</p>
+            </div>
+        </div>
+
+        <div class="topicHTMLchangJS">
+            <h1>Changing HTML using JS</h1>
+            <p>In JavaScript, you can dynamically modify HTML elements by selecting them using methods
+                like getElementById(), getElementsByTagName(), and querySelector(), and then changing
+                their properties, such as color, background, or size, through the style attribute. These
+                changes can be triggered by user interactions, like clicking a button, and conditional
+                logic can be used to alter styles based on the current state. This ability makes web pages
+                interactive and responsive, improving the user experience.</p>
+
+            <p>description 1</p>
+            <div class="exampleHTMLchangJS">
+                <p>let h1 = window.document.getElementsByTagName('h1')[0];</p>
+                <p>h1.style.color='red';</p>
+            </div>
+
+            <p>description 2</p>
+            <div class="exampleHTMLchangJS">
+                <p>let body = window.document.body;</p>
+                <p>body.style.background="green";</p>
+            </div>
+
+            <p>description 3</p>
+            <div class="exampleHTMLchangJS">
+                <p>let box = document.querySelector(".box");</p>
+                <p>box.style.backgroundColor = "blue";</p>
+                <p>box.style.width ="800px";</p>
+            </div>
+
+            <p>description 4</p>
+            <div class="exampleHTMLchangJS">
+                <p>function mudarCor() {</p>
+                <p id="tabBottom1">let div = document.getElementById("minhaDiv");</p>
+                <p id="tab1">if(div.style.background == "fuchsia"){</p>
+                <p id="tab2">div.style.background = "violet"</p>
+                <p id="tab1">}else{</p>
+                <p id="tab2">div.style.background = "fuchsia"</p>
+                <p id="tab1">}</p>
+                <p>}</p>
+            </div>
+
+            <div class="buttonColorHTMLJS">
+                <button>Click Here!</button>
+            </div>
+        </div>
+
+        <div class="topicRestaurant">
+            <h1>Restaurant</h1>
+            <p>This code is part of a restaurant website that allows customers to calculate the total
+                price of their order. It takes the price of a dish and the quantity ordered, then
+                computes the total cost. If no dish is selected (price is 0), the user is prompted to
+                choose a dish. Once a valid price and quantity are provided, the total amount is displayed
+                to the user, formatted as currency. This functionality enhances the user experience by
+                helping customers quickly calculate their order cost directly on the site.</p>
+
+                <div class="buttonColor">
+                    <a href="./restaurantPage/restaurant.html"><h1>see our restaurant!</h1></a>
+                </div>
+        </div>
     </main>
     <footer class="footer">
         <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
     </footer>
 </body>
+
 </html>

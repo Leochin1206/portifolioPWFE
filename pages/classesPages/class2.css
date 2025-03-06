@@ -1,0 +1,106 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.topics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstTopic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    width: 75%;
+    color: white;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.firstTopic:hover{
+    transform: scale(1.02);
+}
+
+.firstTopic h1{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.firstTopic p{
+    font-size: 22px;
+    font-weight: 550;
+    width: 95%;
+}
+
+.imagesFistTopic{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    gap: 2%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.imagesFistTopic img{
+    width: 300px;
+    height: auto;
+}
+
+.secondTopic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    width: 75%;
+    padding: 2%;
+    margin-bottom: 3%;
+    color: white;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.secondTopic:hover{
+    transform: scale(1.02);
+}
+
+.secondTopic h1{
+    margin-bottom: 1%;
+}
+
+#descriptionTopic{
+    font-size: 22px;
+    font-weight: 550;
+    margin-bottom: 2%;
+}
+
+.nilsen{
+    width: 95%;
+    font-size: 20px;
+}
+
+.nilsen p{
+    margin-bottom: 10px;
+}
+
+.nilsen span{
+    font-weight: bold;
+}
+
+.nilsen img{
+    margin-left: 21%;
+    width: 60%;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

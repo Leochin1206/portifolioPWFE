@@ -11,6 +11,9 @@ saudarAlunos()
 resultado = somar(13, 41, 4, 33)
 document.write(`O resultado da soma é ${resultado}`)
 
+
+
+
 const subtrair = function(n1, n2){
     return n1-n2;
 }

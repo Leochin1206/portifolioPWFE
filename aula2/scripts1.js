@@ -4,6 +4,10 @@ h1.style.color='red';
 let body = window.document.body;
 body.style.background="green";
 
+let box = document.querySelector(".box");
+box.style.backgroundColor = "blue";
+box.style.width ="800px";
+
 function mudarCor() {
     let div = document.getElementById("minhaDiv");
 
@@ -13,7 +17,3 @@ function mudarCor() {
         div.style.background = "fuchsia"
     }
 }
-
-let box = document.querySelector(".box");
-box.style.backgroundColor = "blue";
-box.style.width ="800px";

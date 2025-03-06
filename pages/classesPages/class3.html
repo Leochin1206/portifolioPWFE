@@ -1,75 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./classPages.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./class3.css" media="screen" />
     <link rel="icon" type="image/png" href="../images/logo2.png">
     <title>Portifolio</title>
 </head>
+
 <body>
     <header>
         <nav>
             <div class="linksNavBar">
                 <div class="iconNavBar">
-                    <a href="../home.html"><img src="../../images/homeIcon.png"/>Home</a>
+                    <a href="../home.html"><img src="../../images/homeIcon.png" />Home</a>
                 </div>
                 <div class="iconNavBar">
-                    <a href="../classes.html"><img src="../../images/schoolIcon.png"/>Classes</a>
+                    <a href="../classes.html"><img src="../../images/schoolIcon.png" />Classes</a>
                 </div>
                 <div class="iconNavBar">
-                    <a href="../exerciseList.html"><img src="../../images/listIcon.png"/>Exercise List</a>
+                    <a href="../exerciseList.html"><img src="../../images/listIcon.png" />Exercise List</a>
                 </div>
                 <div class="iconNavBar">
-                    <a href="../profile.html"><img src="../../images/personIcon.png"/>My Profile</a>
+                    <a href="../profile.html"><img src="../../images/personIcon.png" />My Profile</a>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <div>
-            <p>
-                // Alert - Chamo a atenção do meu usuário, obrigando-o a aceitar o que eu desejo!
-                // Boas práticas, é interessante colocar o caminho do camando que deseja, porém
-                // depois do ecma 18, não se fazz obrigatório
-                
-                window.alert("Olá mundo, estou quebrando uma maldição!")
-                alert("Estava com suadades de vocês!")
-        
-                // Prompt - é como o input do python, permite que meu usuário insira um valor
-                // variaveis: let(valores flexiveis) || const(valores fixos) || var(a forma mais antiga de declarar uma variavel)
-        
-                let matFav = window.prompt("Qual a minha materia preferida?")
-        
-                // Confirm - Apresenta dois botões o de "ok" e o de "Cancelar"
-                
-                confirm("Você adora JavaScript, né?") 
-        
-                // escrever uma frase no corpo do html
-                document.write(`Materia favorita: ${matFav}`)
-        
-                ////////////////////////// ex Nota ////////////////////////
-                let nota1 = Number(prompt("Informe a sua nota: "))
-                let nota2 = Number(prompt("Informe a sua nota: "))
-                let media = (nota1 + nota2)/2
-        
-                // frases interpoladas entre textos e variaveis, necessitam de crase, e para variavel ${}
-                alert(`A sua média é de: ${media}`)
-        
-                if(media >= 5 ){
-                    alert(`você está aprovado, meus parabéns!`)
-                }else{
-                    alet("Você foi reprovado!")
-                }
-        
-                for(let i=10; i > 0; i--){
-                    document.write(`<br>${i}`)
-                }
-            </p>
+        <div class="topic1">
+            <h1>Dialog Boxes</h1>
+            <p id="description">Dialog boxes are pop-up windows that appear on the screen to display messages or interact 
+                with the user. They are useful for simple notifications, confirmations, and data input, 
+                but they are not recommended for more sophisticated interfaces as they block code execution 
+                until the user interacts with them. There are three types:</p>
+
+            <p>Alert -> Displays a dialog box with a message and an "OK" button. It is used to inform the user.</p>
+            <div class="example">
+                <h5>alert(<span>"Hello World!"</span>);</h5>
+            </div>
+
+            <p>Confirm -> Displays a dialog box with a message and "OK" and "Cancel" buttons. Returns 
+                true if the user clicks "OK" and false if they click "Cancel."</p>
+            <div class="example">
+                <h5>confirm(<span>"Do you like JavaScript?"</span>);</h5>
+            </div>
+
+            <p>Prompt -> Displays a dialog box with a message and an input field for the user to 
+                type something. Returns the entered value or null if the user cancels.</p>
+            <div class="example">
+                <h5>
+                    <span id="let">let</span>
+                    <span id="name"> name =</span> prompt(<span>"Hello World!"</span>);
+                </h5>
+                <h5><span id="console">console</span>.<span id="log">log</span>(<span>name</span>);</h5>
+            </div>
+        </div>
+        <div class="topic2">
+            <h1>Variables</h1>
+            <div class="description">
+                <h1>var:</h1>
+                <div class="alinhamento">
+                    <p>- Has function scope.</p>
+                    <p>- Can be redeclared within the same scope.</p>
+                    <p>- Can cause issues due to hoisting.</p>
+                </div>
+            </div>
+            <div class="exampleVar">
+                <h5><span id="let">var</span> <span id="name"> name =</span> <span>"João"</span>;</h5>
+                <h5><span id="let">var</span> <span id="name"> name =</span> <span>"Maria"</span>;</h5>
+                <h5><span id="console">console</span>.<span id="log">log</span>(<span>name</span>);</h5>
+            </div>
+
+            <div class="description">
+                <h1>let:</h1>
+                <div class="alinhamento">
+                    <p>- Recommended for mutable variables.</p>
+                    <p>- Has block scope ({}), avoiding variable conflicts.</p>
+                    <p>- Can be updated, but not redeclared within the same scope.</p>
+                </div>
+            </div>
+            <div class="exampleVar">
+                <h5><span id="let">let</span> <span id="name"> age =</span> <span id="num">25</span>;</h5>
+                <h5><span id="name"> age =</span> <span id="num">40</span>;</h5>
+                <h5><span id="comment">// let age = 40; // Erro</span></h5>
+                <h5><span id="console">console</span>.<span id="log">log</span>(<span>age</span>);</h5>
+            </div>
+
+            <div class="description">
+                <h1>const:</h1>
+                <div class="alinhamento">
+                    <p>- For constant values.</p>
+                    <p>- Also has block scope.</p>
+                    <p>- Cannot be reassigned after declaration.</p>
+                </div>
+            </div>
+            <div class="exampleVar">
+                <h5><span id="let">var</span> <span id="name"> name =</span> <span>"João"</span>;</h5>
+                <h5><span id="let">var</span> <span id="name"> name =</span> <span>"Maria"</span>;</h5>
+                <h5><span id="console">console</span>.<span id="log">log</span>(<span>name</span>);</h5>
+            </div>
+
+        </div>
+        <div class="topic3">
+            <h1>Writing a phrase in the HTML body</h1>
+            <p>The document.write() command inserts text directly into the HTML body, displaying the 
+                value placed inside the parentheses. However, its use should be cautious, as it can 
+                replace all the content of the page.</p>
+
+            <div class="exampleWHTML">
+                <h5><span id="let">let</span> <span id="name"> subject =</span> <span>"Math"</span>;</h5>
+                <h5><span id="console">document</span>.<span id="log">write</span>(<span id="str">`My favorite subject is <span id="interpolation">${subject}</span>!`</span>)</h5>
+            </div>
+        </div>
+        <div class="topic4">
+            <h1>IF ELSE Exercise</h1>
+
+            <div class="exampleExercise">
+                <p><span id="let">let</span> <span id="name"> num1 =</span> Number(prompt(<span>"Informe a sua nota: "</span>))</p>
+                <p><span id="let">let</span> <span id="name"> num2 =</span> Number(prompt(<span>"Informe a sua nota: "</span>))</p>
+                <p><span id="let">let</span> <span id="name"> average =</span> ( <span id="name"> num1 </span> + <span id="name"> num2 </span>)/<span id="log">2</span></p>
+                <p id="marginComment">// Interpolated phrases between texts and variables require backticks () and for variables ${ }</p>
+                <p>alert(<span id="str">`A sua média é de: <span id="interpolation">${media}</span>`</span>)</p>
+                <p id="if">if(<span id="name"> average </span> >= <span id="log">5</span> ){</p>
+                <p id="marginAlert">alert(<span>"você está aprovado, meus parabéns!"</span>)</p>
+                <p>}else{</p>
+                <p id="marginAlert">alert(<span>"Você foi reprovado!"</span>)</p>
+                <p>}</p>
+                <p></p>
+            </div>
         </div>
     </main>
     <footer class="footer">
         <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
     </footer>
 </body>
+
 </html>
