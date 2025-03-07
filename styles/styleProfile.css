@@ -86,8 +86,8 @@ main{
 .profilePicLeo {
     position: absolute;
     bottom: -160px;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     border: 5px solid white;
 }
@@ -101,9 +101,9 @@ main{
 
 .nameProfile{
     display: flex;
-    flex-direction: column;
     align-items: start;
     justify-content: center;
+    gap: 64%;
     padding: 1%;
     width: 75%;
     margin-top: 190px;
@@ -121,6 +121,16 @@ main{
 
 .nameProfile p{
     color: white;
+}
+
+.icons{
+    display: flex;
+    gap: 13px;
+}
+
+.icons img{
+    width: 50px;
+    height: auto;
 }
 
 .descriptionProfile{
@@ -160,6 +170,7 @@ main{
     background-color: #4E35A9;
     padding: 20px;
     margin-top: 2%;
+    margin-bottom: 3%;
 }
 
 .dropdown {
