@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./restaurant.css" media="screen" />
-    <link rel="icon" type="image/png" href="../images/logo2.png">
+    <link rel="icon" type="image/png" href="../../../images/logo2.png">
     <title>Portifolio</title>
 </head>
 <body>
@@ -27,7 +27,28 @@
         </nav>
     </header>
     <main>
-        restaurant restaurant
+        <div class="conteiner">
+            <div class="menu">
+                <label>Choose a dish</label>
+                <select id="prato">
+                    <option value="0">Select a dish</option>
+                    <option value="40">lasanha - R$40,00</option>
+                    <option value="45">Strogonoff - R$45,00</option>
+                    <option value="56">contra filé com fritas - R$56,00</option>
+                </select>
+            </div>
+
+            <div class="quantidade">
+                <label>Amount</label>
+                <input type="number" id="quantidade" min="1" max="10" required>
+            </div>
+
+            <button onclick="calcularTotal()">Calculate</button>
+
+            <p id="resultado">Total: R$ </p>
+        </div>
+
+        <script src="./retaurante.js"></script>
     </main>
     <footer class="footer">
         <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>

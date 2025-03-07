@@ -67,3 +67,35 @@ main{
     box-shadow: 0px -4px 10px #0000001a;
 }
 
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerHome{
+    width: 100%;
+}
+
+.headerHome img{
+    width: 100%;
+}
+
+.classSumary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    border-radius: 5px;
+    color: #4E35A9;
+    background-color: white;
+    box-shadow: 0px 10px 15px #0000001a;
+    width: 60%;
+}
+
+.classSumary p{
+    margin-top: 2%;
+    font-size: 20px;
+    font-weight: 500;
+}

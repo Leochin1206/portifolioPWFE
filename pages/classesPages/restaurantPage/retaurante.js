@@ -3,9 +3,9 @@ function calcularTotal(){
     let quantidade = parseInt(document.getElementById('quantidade').value) || 1;
 
     if(precoPrato === 0){
-        document.getElementById('resultado').textContent = "Por favor, informe um prato";
+        document.getElementById('resultado').textContent = "Please, select a Dish!";
     }else{
         let total = precoPrato * quantidade;
-        document.getElementById('resultado').textContent = `Total a pagar é R$${total.toFixed(2)}`;
+        document.getElementById('resultado').textContent = `Total: R$ ${total.toFixed(2)}`;
     }
 }

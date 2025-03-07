@@ -99,6 +99,11 @@ main{
     font-weight: 550;
 }
 
+#descriptionTopics{
+    font-weight: normal;
+    text-align: justify;
+}
+
 .exampleHTMLchangJS{
     margin-top: 1%;
     padding: 1%;
@@ -106,12 +111,6 @@ main{
     color: #ff9e00;
     width: 55%;
     background-color: #10002b;
-}
-
-.buttonColorHTMLJS{
-    margin-top: 3%;
-    padding: 2%;
-    background-color: white;
 }
 
 .buttonColorHTMLJS button{
@@ -122,6 +121,10 @@ main{
     color: #4E35A9;
     font-size: 28px;
     font-weight: bold;
+    padding: 10%;
+    width: 200px;
+    margin-top: 20%;
+    margin-bottom: 2%;
 }
 
 .topicRestaurant{
@@ -166,6 +169,7 @@ main{
 
 .buttonColor a{
     text-decoration: none;
+    color: #4E35A9;
 }
 
 .buttonColor a:hover{
@@ -174,7 +178,15 @@ main{
 }
 
 #blue{
-    color: blue;
+    color: dodgerblue;
+}
+
+#bluereturn{
+    color: deepskyblue;
+}
+
+#yellowDocument{
+    color: khaki;
 }
 
 #white{

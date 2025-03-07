@@ -36,10 +36,12 @@
                 accept parameters and return a value. Functions are defined using the function keyword.</p>
 
             <div class="exampleFunctions">
-                <p>function greet(name) {</p>
-                <p id="tab1">return "Hello, " + name;</p>
+                <p><span id="purple">function</span> greet(<span id="white">name</span>) {</p>
+                <p id="tab1"><span id="bluereturn">return</span> <span id="greenStr">"Hello, "</span> + <span
+                        id="white">name</span>;</p>
                 <p>}</p>
-                <p>console.log(greet("John")); // Output: "Hello, John"</p>
+                <p><span id="purple">console</span>.<span id="red">log</span>(<span id="yellow">greet(<span
+                            id="greenStr">"John"</span>)</span>); <span id="grey">// Output: "Hello, John"</span></p>
             </div>
         </div>
 
@@ -50,8 +52,10 @@
                 functions or callbacks.</p>
 
             <div class="exampleArrowFunction">
-                <p>const greet = (name) => "Hello, " + name;</p>
-                <p>console.log(greet("John")); // Output: "Hello, John"</p>
+                <p><span id="blue">const</span> greet = (<span id="white">name</span>) => <span id="greenStr">"Hello,
+                        "</span> + <span id="white">name</span>;</p>
+                <p><span id="purple">console</span>.<span id="red">log</span>(<span id="yellow">greet(<span
+                            id="greenStr">"John"</span>)</span>); <span id="grey">// Output: "Hello, John"</span></p>
             </div>
         </div>
 
@@ -64,39 +68,71 @@
                 logic can be used to alter styles based on the current state. This ability makes web pages
                 interactive and responsive, improving the user experience.</p>
 
-            <p>description 1</p>
-            <div class="exampleHTMLchangJS">
-                <p>let h1 = window.document.getElementsByTagName('h1')[0];</p>
-                <p>h1.style.color='red';</p>
+            <p id="descriptionTopics">This code selects the first h1 element on the page using getElementsByTagName('h1')[0] 
+                and stores it in the h1 variable. Then, it modifies the text color of the selected h1 
+                    element by setting its style.color property to 'red', changing the color of the text 
+                    to red.</p>
+            
+                    <div class="exampleHTMLchangJS">
+                <p><span id="blue">let</span> <span id="white">h1</span> = <span id="bluereturn">window</span>.<span
+                        id="yellowDocument">document</span>.<span id="yellow">getElementsByTagName(<span
+                            id="greenStr">'h1'</span>)[0]</span>;</p>
+                <p><span id="bluereturn">h1</span>.<span id="yellowDocument">style</span>.color=<span
+                        id="greenStr">'red'</span>;</p>
             </div>
 
-            <p>description 2</p>
-            <div class="exampleHTMLchangJS">
-                <p>let body = window.document.body;</p>
-                <p>body.style.background="green";</p>
+            <p id="descriptionTopics">This code selects the "body" element of the document using "window . document . body" 
+                and stores it in the "body" variable. Then, it changes the background color of the entire page by setting 
+                the "style . background" property of the "body" element to "green", making the background color green.</p>
+            
+                <div class="exampleHTMLchangJS">
+                <p><span id="blue">let</span> <span id="white">body</span> = <span id="bluereturn">window</span>.<span
+                        id="yellowDocument">document</span>.<span id="yellow">body</span>;</p>
+                <p><span id="blue">body</span>.<span id="yellowDocument">style</span>.<span
+                        id="yellow">background</span>=<span id="greenStr">"green"</span>;</p>
             </div>
 
-            <p>description 3</p>
-            <div class="exampleHTMLchangJS">
-                <p>let box = document.querySelector(".box");</p>
-                <p>box.style.backgroundColor = "blue";</p>
-                <p>box.style.width ="800px";</p>
+            <p id="descriptionTopics">This code selects the first HTML element with the class .box using document.querySelector(".box") 
+                and stores it in the box variable. It then modifies the selected element by setting its background color to blue 
+                (box.style.backgroundColor = "blue") and adjusting its width to 800 pixels (box.style.width = "800px"). As a result, 
+                the element with the class box will have a blue background and a width of 800px.</p>
+            
+                <div class="exampleHTMLchangJS">
+                <p><span id="blue">let</span> <span id="white">box</span> = <span id="bluereturn">document</span>.<span
+                        id="yellow">querySelector(<span id="greenStr">".box"</span>)</span>;</p>
+                <p><span id="bluereturn">box</span>.<span id="yellowDocument">style</span>.<span
+                        id="yellow">backgroundColor</span> = <span id="greenStr">"blue"</span>;</p>
+                <p><span id="bluereturn">box</span>.<span id="yellowDocument">style</span>.<span
+                        id="yellow">width</span> = <span id="greenStr">"800px"</span>;</p>
             </div>
 
-            <p>description 4</p>
+            <p id="descriptionTopics">This code defines a function called "mudarCor" that 
+                changes the background color of a "div" element with the ID "minhaDiv". 
+                    When the function is called, it checks if the current background color of the 
+                    "div" is "fuchsia" using the condition "div.style.background == "fuchsia". 
+                        If the color is "fuchsia", it changes the background color to "violet". If 
+                        the color is not "fuchsia", it sets the background color to "fuchsia". Essentially, 
+                        this function toggles the background color between "fuchsia" and "violet" 
+                        each time it's executed.</p>
+
             <div class="exampleHTMLchangJS">
-                <p>function mudarCor() {</p>
-                <p id="tabBottom1">let div = document.getElementById("minhaDiv");</p>
-                <p id="tab1">if(div.style.background == "fuchsia"){</p>
-                <p id="tab2">div.style.background = "violet"</p>
+                <p><span id="purple">function</span> mudarCor() {</p>
+                <p id="tabBottom1"><span id="blue">let</span> <span id="white">div</span> = <span
+                        id="bluereturn">document</span>.<span id="yellow">getElementById(<span
+                            id="greenStr">"minhaDiv"</span>)</span>;</p>
+                <p id="tab1">if(<span id="bluereturn">div</span>.<span id="yellowDocument">style</span>.<span
+                        id="yellow">background</span> == <span id="greenStr">"fuchsia"</span>){</p>
+                <p id="tab2"><span id="bluereturn">div</span>.<span id="yellowDocument">style</span>.<span
+                        id="yellow">background</span> = <span id="greenStr">"violet"</span></p>
                 <p id="tab1">}else{</p>
-                <p id="tab2">div.style.background = "fuchsia"</p>
+                <p id="tab2"><span id="bluereturn">div</span>.<span id="yellowDocument">style</span>.<span
+                        id="yellow">background</span> = <span id="greenStr">"fuchsia"</span></p>
                 <p id="tab1">}</p>
                 <p>}</p>
             </div>
 
             <div class="buttonColorHTMLJS">
-                <button>Click Here!</button>
+                <button id="myButton" class="buttonColor">Click Here!</button>
             </div>
         </div>
 
@@ -109,14 +145,31 @@
                 to the user, formatted as currency. This functionality enhances the user experience by
                 helping customers quickly calculate their order cost directly on the site.</p>
 
-                <div class="buttonColor">
-                    <a href="./restaurantPage/restaurant.html"><h1>see our restaurant!</h1></a>
-                </div>
+            <div class="buttonColor">
+                <a href="./restaurantPage/restaurant.html">
+                    <h1>see our restaurant!</h1>
+                </a>
+            </div>
         </div>
     </main>
     <footer class="footer">
         <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
     </footer>
 </body>
+<script>
+    function gerarCorAleatoria() {
+        const letras = '0123456789ABCDEF';
+        let cor = '#';
+        for (let i = 0; i < 6; i++) {
+            cor += letras[Math.floor(Math.random() * 16)];
+        }
+        return cor;
+    }
+
+    document.getElementById("myButton").addEventListener("click", function() {
+        this.style.backgroundColor = gerarCorAleatoria();  
+        this.style.color = gerarCorAleatoria();            
+    });
+</script>
 
 </html>
