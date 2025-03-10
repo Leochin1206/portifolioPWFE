@@ -172,6 +172,10 @@ main{
     background-color: #4E35A9;
 }
 
+.repositoryProfile a{
+    text-decoration: none;
+}
+
 .dropdown {
     display: flex;
     flex-direction: column;

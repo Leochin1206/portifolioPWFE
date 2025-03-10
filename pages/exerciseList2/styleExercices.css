@@ -221,7 +221,12 @@ body {
 
 .sex{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 330px;
+    height: 70px;
     gap: 30%;
+    margin-top: 8%;
 }
 
 .sex label {
@@ -261,6 +266,46 @@ body {
     display: block;
 }
 
+.register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register button{
+    margin-top: 2%;
+    padding: 2%;
+    width: 30%;
+    font-size: 22px;
+    font-weight: 550;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    background-color: #4E35A9;
+    border: solid 3px #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.register button:hover{
+    background-color: white;
+    color: #4E35A9;
+    transform: scale(1.04);
+}
+
+.register #errorMessages{
+    color: red;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.valuesInsert #result{
+    margin-top: 3%;
+    color: #4E35A9;
+}
 
 .finalResult:hover{
     transform: scale(1.05);

@@ -74,12 +74,13 @@
                     </div>
                 </div>
 
-                <button type="submit">Check!</button>
+                <div id="errorMessages"></div>
+
+                <button type="submit">Register!</button>
             </form>
 
             <div class="resultMessages">
                 <h2 id="result">Register...</h2>
-                <div id="errorMessages"></div>
             </div>
         </div>
         <div class="nextExercise">
@@ -119,32 +120,32 @@
         let allFieldsFilled = true;
 
         if (!valueInputName) {
-            errorMessages.innerHTML += 'Name is required.<br>';
+            errorMessages.innerHTML += ' Name is required! ';
             allFieldsFilled = false;
         }
 
         if (!valueInputAddress) {
-            errorMessages.innerHTML += 'Address is required.<br>';
+            errorMessages.innerHTML += ' Address is required! ';
             allFieldsFilled = false;
         }
 
         if (!selectedGender) {
-            errorMessages.innerHTML += 'Gender is required.<br>';
+            errorMessages.innerHTML += ' Gender is required! ';
             allFieldsFilled = false;
         }
 
         if (!valueInputPhoneNumber) {
-            errorMessages.innerHTML += 'Phone Number is required.<br>';
+            errorMessages.innerHTML += ' Phone Number is required! ';
             allFieldsFilled = false;
         }
 
         if (!valueInputCellphone) {
-            errorMessages.innerHTML += 'Cellphone is required.<br>';
+            errorMessages.innerHTML += ' Cellphone is required! ';
             allFieldsFilled = false;
         }
 
         if (!valueInputEmail) {
-            errorMessages.innerHTML += 'E-mail is required.<br>';
+            errorMessages.innerHTML += ' E-mail is required! ';
             allFieldsFilled = false;
         }
 

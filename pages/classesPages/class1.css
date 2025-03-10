@@ -56,6 +56,58 @@ main{
     height: auto;
 }
 
+.figma{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    width: 75%;
+    padding: 2%;
+    margin-bottom: 3%;
+    color: white;
+    background-color: #4E35A9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.figma:hover{
+    transform: scale(1.02);
+}
+
+.figma h1{
+    margin-bottom: 1%;
+    margin-bottom: 1%;
+}
+
+.linkFigma{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding: 2%;
+    margin-top: 1%;
+    background-color: white;
+    border: 3px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.linkFigma:hover{
+    background-color: #4E35A9;
+}
+
+.linkFigma a{
+    text-decoration: none;
+    color: #4E35A9;
+}
+
+.linkFigma h1:hover{
+    color: white;
+}
+
+.linkFigma a:hover{
+    color: white;
+}
+
 .secondTopic{
     display: flex;
     flex-direction: column;
