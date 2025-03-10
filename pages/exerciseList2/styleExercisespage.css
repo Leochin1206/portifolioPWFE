@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.linksNavBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 95px;
+    background-color: white;
+    box-shadow: 0px 4px 2px #0000001a;
+}
+
+.linksNavBar img {
+    width: 40px;
+    height: 40px;
+}
+
+.linksNavBar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-decoration: none;
+    color: #4E35A9;
+    transition-duration: 0.3s;
+    gap: 5px; 
+}
+
+.iconNavBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    width: 100%;
+    background-color: white;
+    color: #4E35A9;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    box-shadow: 0px -4px 10px #0000001a;
+}
+
+.exercises{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    margin-top: 5%;
+    gap: 40px;
+}
+
+.exercise{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    height: 170px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 3px 10px #4E35A9;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.exercise:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 30px #4E35A9;
+}
+
+.exercise a{
+    text-decoration: none;
+}
+
+.exercise h3{
+    color: #4E35A9;
+    margin-bottom: 10px;
+}
+
+.exercise p{
+    color: #4E35A9;
+    margin-bottom: 10px;
+}

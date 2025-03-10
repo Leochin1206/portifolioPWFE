@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styleExercices.css" media="screen" />
+    <link rel="icon" type="image/png" href="../../images/logo2.png">
+    <title>Portifolio</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="linksNavBar">
+                <div class="iconNavBar">
+                    <a href="../home.html"><img src="../../images/homeIcon.png" />Home</a>
+                </div>
+                <div class="iconNavBar">
+                    <a href="../classes.html"><img src="../../images/schoolIcon.png" />Classes</a>
+                </div>
+                <div class="iconNavBar">
+                    <a href="../exerciseList.html"><img src="../../images/listIcon.png" />Exercise List</a>
+                </div>
+                <div class="iconNavBar">
+                    <a href="../profile.html"><img src="../../images/personIcon.png" />My Profile</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="finalResult">
+            <h1>Result</h1>
+
+            <div class="valuesInsert">
+                <div class="inputExercise">
+                    <label for="valueInput">Enter Loan Amount:</label>
+                    <input type="text" id="valueInputLoan" placeholder="...">
+                </div>
+
+                <div class="inputExercise">
+                    <label for="valueInput">Enter Interest Rate (% per month):</label>
+                    <input type="text" id="valueInputRate" placeholder="...">
+                </div>
+
+                <div class="inputExercise">
+                    <label for="valueInput">Enter Number of Installments:</label>
+                    <input type="text" id="valueInputInstallments" placeholder="...">
+                </div>
+
+                <button onclick="getInputValue()">Check!</button>
+            </div>
+
+            <h2 id="result">Financing Amount: </h2>
+        </div>
+        <div class="nextExercise">
+            <a href="./lista2_ex12.html">Previous</a>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    // ex 13: Simular Financiamento: Calcule o valor das parcelas 
+    // de um financiamento (use uma fórmula simplificada)
+
+    function getInputValue() {
+        const inputValueLoan = parseFloat(document.getElementById('valueInputLoan').value);
+        const inputValueRate = parseFloat(document.getElementById('valueInputRate').value) / 100;
+        const inputValueInstallments = parseInt(document.getElementById('valueInputInstallments').value);
+
+        let finalValue = (inputValueLoan * (inputValueRate)) / (1 - Math.pow((1 + (inputValueRate)), -inputValueInstallments))
+
+        document.getElementById('result').innerHTML =
+            `Financing Amount:<br> 
+        Loan Amount: R$ ${inputValueLoan}<br>
+        Interest Rate: ${inputValueRate * 100}%<br>
+        Number of Installments: ${inputValueInstallments} Months<br>
+        Installment value: R$ ${finalValue.toFixed(2)}<br>
+        Final Financing Value: R$ ${(inputValueInstallments * finalValue).toFixed(2)}`
+            ;
+    }
+</script>
+
+</html>

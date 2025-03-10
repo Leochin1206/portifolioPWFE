@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styleExercices.css" media="screen" />
+    <link rel="icon" type="image/png" href="../../images/logo2.png">
+    <title>Portifolio</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="linksNavBar">
+                <div class="iconNavBar">
+                    <a href="../home.html"><img src="../../images/homeIcon.png" />Home</a>
+                </div>
+                <div class="iconNavBar">
+                    <a href="../classes.html"><img src="../../images/schoolIcon.png" />Classes</a>
+                </div>
+                <div class="iconNavBar">
+                    <a href="../exerciseList.html"><img src="../../images/listIcon.png" />Exercise List</a>
+                </div>
+                <div class="iconNavBar">
+                    <a href="../profile.html"><img src="../../images/personIcon.png" />My Profile</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="finalResult">
+            <h1>Result</h1>
+
+            <form class="register" onsubmit="return getInputValue(event)">
+                <div class="alignInput">
+                    <div class="inputExercise9">
+                        <label for="valueInputName">Name:</label>
+                        <input type="text" id="valueInputName" placeholder="...">
+                    </div>
+
+                    <div class="inputExercise9">
+                        <label for="valueInputAddress">Address:</label>
+                        <input type="text" id="valueInputAddress" placeholder="...">
+                    </div>
+                </div>
+
+                <div class="alignInput">
+                    <div class="sex">
+                        <label>
+                            <input type="radio" name="gender" id="Masculine" value="M"> M
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" id="Feminine" value="F"> F
+                        </label>
+                    </div>
+
+                    <div class="inputExercise9">
+                        <label for="valueInputPhoneNumber">Phone Number:</label>
+                        <input type="text" id="valueInputPhoneNumber" placeholder="...">
+                    </div>
+                </div>
+
+                <div class="alignInput">
+                    <div class="inputExercise9">
+                        <label for="valueInputCellphone">Cellphone:</label>
+                        <input type="text" id="valueInputCellphone" placeholder="...">
+                    </div>
+
+                    <div class="inputExercise9">
+                        <label for="valueInputEmail">E-mail:</label>
+                        <input type="text" id="valueInputEmail" placeholder="...">
+                    </div>
+                </div>
+
+                <button type="submit">Check!</button>
+            </form>
+
+            <div class="resultMessages">
+                <h2 id="result">Register...</h2>
+                <div id="errorMessages"></div>
+            </div>
+        </div>
+        <div class="nextExercise">
+            <a href="./lista2_ex8.html">Previous</a>
+            <a href="./lista2_ex10.html">Next</a>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    // ex 09: Faça um formulário de cadastro, onde o usuário informará: 
+    // Nome:
+    // Endereço:
+    // Sexo (radio button):
+    // Telefone:
+    // Celular:
+    // Email:
+    // Onde nenhum dos campos pode estar vazio no momento em que selecionado
+    // um botão “Enviar”, Caso isso aconteça deve ser exibido um alert na tela
+    // informando o campo vazio.
+
+    function getInputValue(event) {
+        event.preventDefault();
+
+        const errorMessages = document.getElementById('errorMessages');
+        errorMessages.innerHTML = '';
+
+        const valueInputName = document.getElementById('valueInputName').value.trim();
+        const valueInputAddress = document.getElementById('valueInputAddress').value.trim();
+        let selectedGender = document.querySelector('input[name="gender"]:checked')?.value;
+        const valueInputPhoneNumber = document.getElementById('valueInputPhoneNumber').value.trim();
+        const valueInputCellphone = document.getElementById('valueInputCellphone').value.trim();
+        const valueInputEmail = document.getElementById('valueInputEmail').value.trim();
+
+        let allFieldsFilled = true;
+
+        if (!valueInputName) {
+            errorMessages.innerHTML += 'Name is required.<br>';
+            allFieldsFilled = false;
+        }
+
+        if (!valueInputAddress) {
+            errorMessages.innerHTML += 'Address is required.<br>';
+            allFieldsFilled = false;
+        }
+
+        if (!selectedGender) {
+            errorMessages.innerHTML += 'Gender is required.<br>';
+            allFieldsFilled = false;
+        }
+
+        if (!valueInputPhoneNumber) {
+            errorMessages.innerHTML += 'Phone Number is required.<br>';
+            allFieldsFilled = false;
+        }
+
+        if (!valueInputCellphone) {
+            errorMessages.innerHTML += 'Cellphone is required.<br>';
+            allFieldsFilled = false;
+        }
+
+        if (!valueInputEmail) {
+            errorMessages.innerHTML += 'E-mail is required.<br>';
+            allFieldsFilled = false;
+        }
+
+        if (allFieldsFilled) {
+
+            document.getElementById('result').textContent = "Registration completed successfully!";
+            return true;
+
+        } else {
+
+            document.getElementById('result').textContent = "";
+            return false;
+
+        }
+    }
+</script>
+
+</html>
