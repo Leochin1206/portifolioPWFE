@@ -57,13 +57,20 @@
     // ex 02: Desenvolva um programa que a partir de um vetor de inteiros com 8 valores inicializados na declaração 
     // apresente a média aritméticas desses valores.
 
-
     function getInputValue() {
-        const inputValue = document.getElementById('valueInput').value;
+        const inputValue1 = parseFloat(document.getElementById('valueInput1').value);
+        const inputValue2 = parseFloat(document.getElementById('valueInput2').value);
+        const inputValue3 = parseFloat(document.getElementById('valueInput3').value);
+        const inputValue4 = parseFloat(document.getElementById('valueInput4').value);
+        const inputValue5 = parseFloat(document.getElementById('valueInput5').value);
+        const inputValue6 = parseFloat(document.getElementById('valueInput6').value);
+        const inputValue7 = parseFloat(document.getElementById('valueInput7').value);
+        const inputValue8 = parseFloat(document.getElementById('valueInput8').value);
 
-        const reverseLetters = inputValue.split("").reverse().join("");
+        let numbers = [inputValue1, inputValue2, inputValue3, inputValue4, inputValue5, inputValue6, inputValue7, inputValue8];
+        let resultFinal = numbers.map(n => sum(n)/8 );
 
-        document.getElementById('result').textContent = `Your reverse Word: ${reverseLetters}`;
+        document.getElementById('result').textContent = `Result: ${resultFinal}`;
     }
 </script>
 
