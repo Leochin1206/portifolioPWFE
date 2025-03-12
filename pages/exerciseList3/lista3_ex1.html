@@ -58,7 +58,7 @@
                     </label>
                 </div>
 
-                <button onclick="calculate()">Calculate</button>
+                <button onclick="getInputValue()">Calculate</button>
             </div>
 
             <h2 id="result">Result: </h2>
@@ -75,35 +75,18 @@
     // ex 01: Desenvolva um programa que a partir de um vetor de inteiros com 5 valores inicializados na declaração 
     // apresente o dobro de cada valor armazenado.
 
-
-    const calculate = () => {
+    function getInputValue(){
         const value1 = parseFloat(document.getElementById('valueInput1').value);
         const value2 = parseFloat(document.getElementById('valueInput2').value);
-        const add = document.getElementById('add').checked;
-        const subtract = document.getElementById('subtract').checked;
-        const multiply = document.getElementById('multiply').checked;
-        const division = document.getElementById('division').checked;
+        const value3 = parseFloat(document.getElementById('valueInput3').value);
+        const value4 = parseFloat(document.getElementById('valueInput4').value);
+        const value5 = parseFloat(document.getElementById('valueInput5').value);
+    
+        let arrayDouble = [value1, value2, value3, value4, value5];
+        let resultFinal = arrayDouble.map(n => n * 2)
 
-        let result = 0;
-
-        if (add) result = value1 + value2;
-        if (subtract) result = value1 - value2;
-        if (multiply) result = value1 * value2;
-        if (division) result = value1 / value2;
-
-        document.getElementById('result').textContent = `Result: ${result.toFixed(2)}`;
+        document.getElementById('result').textContent = `Result: ${resultFinal}`;
     };
-
-    const selectOperation = (selected) => {
-        const operations = document.querySelectorAll('.operations input[type="checkbox"]');
-
-        operations.forEach(operation => {
-            operation.checked = false;
-        });
-
-        selected.checked = true;
-    };
-
 </script>
 
 </html>
