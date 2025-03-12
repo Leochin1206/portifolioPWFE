@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styleExercices.css" media="screen" />
+    <link rel="icon" type="image/png" href="../../images/logo2.png">
+    <title>Portifolio</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="linksNavBar">
+                <div class="iconNavBar">
+                    <a href="../home.html"><img src="../../images/homeIcon.png" />Home</a>
+                </div>
+                <div class="iconNavBar">
+                    <a href="../classes.html"><img src="../../images/schoolIcon.png" />Classes</a>
+                </div>
+                <div class="iconNavBar">
+                    <a href="../exerciseList.html"><img src="../../images/listIcon.png" />Exercise List</a>
+                </div>
+                <div class="iconNavBar">
+                    <a href="../profile.html"><img src="../../images/personIcon.png" />My Profile</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="finalResult">
+            <h1>Result</h1>
+
+            <div class="valuesInsert">
+                <div class="inputExercise">
+                    <label for="valueInput">Enter a Hour:</label>
+                    <input type="text" id="valueInput" placeholder="...">
+                </div>
+
+                <button onclick="getInputValue()">Check!</button>
+            </div>
+            
+            <h2 id="result">Minutes: </h2>
+        </div>
+        <div class="nextExercise">
+            <a href="./lista3_ex5.html">Previous</a>
+            <a href="./lista3_ex7.html">Next</a>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Leonardo A. Viana - All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    // ex 06: Desenvolva um programa que a partir de um vetor de Strings com 10 nomes inicializados na declaração 
+    // leia um novo nome e verifique se ele está armazenado no vetor, se estiver, apresenta a posição (índice) onde ele está, 
+    // caso contrário, apresente a mensagem “Nome não encontrado!”
+
+
+    function getInputValue() {
+        const inputValue = parseFloat(document.getElementById('valueInput').value);
+        let result = 0;
+
+        result = inputValue * 60;
+
+        document.getElementById('result').textContent = `Minutes: ${result}`;
+    }
+</script>
+
+</html>
