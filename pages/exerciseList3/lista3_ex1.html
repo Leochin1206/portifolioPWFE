@@ -33,29 +33,32 @@
             <h1>Result</h1>
 
             <div class="valuesInsert">
-                <div class="inputExercise">
-                    <label for="valueInput1">First Number:</label>
-                    <input type="text" id="valueInput1" placeholder="...">
+                <div class="alignInput">
+                    <div class="inputExercise">
+                        <label for="valueInput1">1° Number:</label>
+                        <input type="text" id="valueInput1" placeholder="...">
+                    </div>
+
+                    <div class="inputExercise">
+                        <label for="valueInput2">2° Number:</label>
+                        <input type="text" id="valueInput2" placeholder="...">
+                    </div>
                 </div>
 
-                <div class="inputExercise">
-                    <label for="valueInput2">Second Number:</label>
-                    <input type="text" id="valueInput2" placeholder="...">
-                </div>
+                <div class="alignInput">
+                    <div class="inputExercise">
+                        <label for="valueInput2">3° Number:</label>
+                        <input type="text" id="valueInput3" placeholder="...">
+                    </div>
 
-                <div class="operations">
-                    <label>
-                        <input type="checkbox" id="add" value="+" onclick="selectOperation(this)"> +
-                    </label>
-                    <label>
-                        <input type="checkbox" id="subtract" value="-" onclick="selectOperation(this)"> -
-                    </label>
-                    <label>
-                        <input type="checkbox" id="multiply" value="*" onclick="selectOperation(this)"> *
-                    </label>
-                    <label>
-                        <input type="checkbox" id="division" value="/" onclick="selectOperation(this)"> /
-                    </label>
+                    <div class="inputExercise">
+                        <label for="valueInput2">4° Number:</label>
+                        <input type="text" id="valueInput4" placeholder="...">
+                    </div>
+                </div>
+                <div class="inputExercise">
+                    <label for="valueInput2">5° Number:</label>
+                    <input type="text" id="valueInput5" placeholder="...">
                 </div>
 
                 <button onclick="getInputValue()">Calculate</button>
@@ -75,17 +78,17 @@
     // ex 01: Desenvolva um programa que a partir de um vetor de inteiros com 5 valores inicializados na declaração 
     // apresente o dobro de cada valor armazenado.
 
-    function getInputValue(){
+    function getInputValue() {
         const value1 = parseFloat(document.getElementById('valueInput1').value);
         const value2 = parseFloat(document.getElementById('valueInput2').value);
         const value3 = parseFloat(document.getElementById('valueInput3').value);
         const value4 = parseFloat(document.getElementById('valueInput4').value);
         const value5 = parseFloat(document.getElementById('valueInput5').value);
-    
+
         let arrayDouble = [value1, value2, value3, value4, value5];
         let resultFinal = arrayDouble.map(n => n * 2)
 
-        document.getElementById('result').textContent = `Result: ${resultFinal}`;
+        document.getElementById('result').textContent = `Result: ${resultFinal[0]} - ${resultFinal[1]} - ${resultFinal[2]} - ${resultFinal[3]} - ${resultFinal[4]}`;
     };
 </script>
 

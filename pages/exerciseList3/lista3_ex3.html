@@ -34,15 +34,16 @@
 
             <div class="valuesInsert">
                 <div class="inputExercise">
-                    <label for="valueInput">Enter a Word:</label>
-                    <input type="text" id="valueInput" placeholder="...">
+                    <label for="valueInput">Enter a Age:</label>
+                    <input type="number" id="valueInput" placeholder="...">
                 </div>
 
-                <button onclick="getInputValue()">Separate!</button>
+                <button onclick="addIdade()">Add</button>
+                <button onclick="getInputValue()">Calculate!</button>
 
             </div>
-            
-            <h2 id="result">Your separate Word: </h2>
+
+            <h2 id="result">Average: </h2>
         </div>
         <div class="nextExercise">
             <a href="./lista3_ex2.html">Previous</a>
@@ -56,12 +57,35 @@
 <script>
     // ex 03: Desenvolva um programa que leia a idade de 20 pessoas e apresente as idades acima da média.
 
+    const ages = [];
+
+    function addIdade() {
+        const inputValue = Number(document.getElementById('valueInput').value);
+        
+
+        if (!isNaN(inputValue) && inputValue > 0) {
+            if (ages.length < 20) {
+                ages.push(inputValue);
+                document.getElementById('valueInput').value = '';
+            } else {
+                alert('20 ages have already been entered.');
+            }
+        } else {
+            alert('Please, enter a valid Age.');
+        }
+    }
+
     function getInputValue() {
-        const inputValue = document.getElementById('valueInput').value;
+        if (ages.length < 20) {
+            alert('Enter 20 ages, please.');
+            return;
+        }
 
-        const separateLetters = inputValue.split("").join(" ");
+        const sum = ages.reduce((acc, val) => acc + val, 0);
+        const average = sum / ages.length;
+        const aboveAverage = ages.filter(inputValue => inputValue > average);
 
-        document.getElementById('result').textContent = `Your separate Word: ${separateLetters}`;
+        document.getElementById('result').textContent = `Average: ${average.toFixed(2)} | Above average age: ${aboveAverage.join(', ')}`;
     }
 
 </script>

@@ -33,16 +33,59 @@
             <h1>Result</h1>
 
             <div class="valuesInsert">
-                <div class="inputExercise">
-                    <label for="valueInput">Enter a Word:</label>
-                    <input type="text" id="valueInput" placeholder="...">
+                <div class="alignInput">
+                    <div class="inputExercise">
+                        <label for="valueInput1">1° Number:</label>
+                        <input type="text" id="valueInput1" placeholder="...">
+                    </div>
+
+                    <div class="inputExercise">
+                        <label for="valueInput2">2° Number:</label>
+                        <input type="text" id="valueInput2" placeholder="...">
+                    </div>
                 </div>
 
-                <button onclick="getInputValue()">Reverse!</button>
+                <div class="alignInput">
+                    <div class="inputExercise">
+                        <label for="valueInput1">3° Number:</label>
+                        <input type="text" id="valueInput3" placeholder="...">
+                    </div>
+
+                    <div class="inputExercise">
+                        <label for="valueInput2">4° Number:</label>
+                        <input type="text" id="valueInput4" placeholder="...">
+                    </div>
+                </div>
+
+                <div class="alignInput">
+                    <div class="inputExercise">
+                        <label for="valueInput1">5° Number:</label>
+                        <input type="text" id="valueInput5" placeholder="...">
+                    </div>
+
+                    <div class="inputExercise">
+                        <label for="valueInput2">6° Number:</label>
+                        <input type="text" id="valueInput6" placeholder="...">
+                    </div>
+                </div>
+
+                <div class="alignInput">
+                    <div class="inputExercise">
+                        <label for="valueInput1">7° Number:</label>
+                        <input type="text" id="valueInput7" placeholder="...">
+                    </div>
+
+                    <div class="inputExercise">
+                        <label for="valueInput2">8° Number:</label>
+                        <input type="text" id="valueInput8" placeholder="...">
+                    </div>
+                </div>
+
+                <button onclick="getInputValue()">Calculate!</button>
 
             </div>
 
-            <h2 id="result">Your reverse Word: </h2>
+            <h2 id="result">Average: </h2>
         </div>
         <div class="nextExercise">
             <a href="./lista3_ex1.html">Previous</a>
@@ -58,20 +101,23 @@
     // apresente a média aritméticas desses valores.
 
     function getInputValue() {
-        const inputValue1 = parseFloat(document.getElementById('valueInput1').value);
-        const inputValue2 = parseFloat(document.getElementById('valueInput2').value);
-        const inputValue3 = parseFloat(document.getElementById('valueInput3').value);
-        const inputValue4 = parseFloat(document.getElementById('valueInput4').value);
-        const inputValue5 = parseFloat(document.getElementById('valueInput5').value);
-        const inputValue6 = parseFloat(document.getElementById('valueInput6').value);
-        const inputValue7 = parseFloat(document.getElementById('valueInput7').value);
-        const inputValue8 = parseFloat(document.getElementById('valueInput8').value);
+        const inputValue1 = parseFloat(document.getElementById('valueInput1').value) || 0;
+        const inputValue2 = parseFloat(document.getElementById('valueInput2').value) || 0;
+        const inputValue3 = parseFloat(document.getElementById('valueInput3').value) || 0;
+        const inputValue4 = parseFloat(document.getElementById('valueInput4').value) || 0;
+        const inputValue5 = parseFloat(document.getElementById('valueInput5').value) || 0;
+        const inputValue6 = parseFloat(document.getElementById('valueInput6').value) || 0;
+        const inputValue7 = parseFloat(document.getElementById('valueInput7').value) || 0;
+        const inputValue8 = parseFloat(document.getElementById('valueInput8').value) || 0;
 
         let numbers = [inputValue1, inputValue2, inputValue3, inputValue4, inputValue5, inputValue6, inputValue7, inputValue8];
-        let resultFinal = numbers.map(n => sum(n)/8 );
 
-        document.getElementById('result').textContent = `Result: ${resultFinal}`;
+        let sum = numbers.reduce((acc, num) => acc + num, 0);
+        let resultFinal = sum / 8;
+
+        document.getElementById('result').textContent = `Average: ${resultFinal.toFixed(2)}`;
     }
+
 </script>
 
 </html>
