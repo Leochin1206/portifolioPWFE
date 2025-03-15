@@ -34,14 +34,14 @@
 
             <div class="valuesInsert">
                 <div class="inputExercise">
-                    <label for="valueInput">Enter a Hour:</label>
+                    <label for="valueInput">Enter a Name:</label>
                     <input type="text" id="valueInput" placeholder="...">
                 </div>
 
                 <button onclick="getInputValue()">Check!</button>
             </div>
             
-            <h2 id="result">Minutes: </h2>
+            <h2 id="result">Result: </h2>
         </div>
         <div class="nextExercise">
             <a href="./lista3_ex5.html">Previous</a>
@@ -57,14 +57,16 @@
     // leia um novo nome e verifique se ele está armazenado no vetor, se estiver, apresenta a posição (índice) onde ele está, 
     // caso contrário, apresente a mensagem “Nome não encontrado!”
 
-
     function getInputValue() {
-        const inputValue = parseFloat(document.getElementById('valueInput').value);
-        let result = 0;
+        const names = ["Fernanda", "Marcia", "Dorival", "Modesto", "Lindomar", "Israel", "Daniel", "Miguel", "Lucas", "Kevin", ];
+        const inputValue = document.getElementById('valueInput').value;
 
-        result = inputValue * 60;
-
-        document.getElementById('result').textContent = `Minutes: ${result}`;
+        if(names.includes(inputValue)){
+            document.getElementById('result').textContent = `Result: Name ${inputValue} found! Your position is ${names.indexOf(inputValue) + 1}°`;
+        }else{
+            document.getElementById('result').textContent = `Result: Name not found!`;
+        }
+        console.log(names.indexOf(inputValue));
     }
 </script>
 

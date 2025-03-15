@@ -29,64 +29,24 @@
         </nav>
     </header>
     <main>
+
         <div class="finalResult">
             <h1>Result</h1>
 
             <div class="valuesInsert">
-                <div class="alignInput">
-                    <div class="inputExercise">
-                        <label for="valueInput1">1° Number:</label>
-                        <input type="text" id="valueInput1" placeholder="...">
-                    </div>
-
-                    <div class="inputExercise">
-                        <label for="valueInput2">2° Number:</label>
-                        <input type="text" id="valueInput2" placeholder="...">
-                    </div>
+                <div class="inputExercise">
+                    <label for="valueInput">Test Score:</label>
+                    <input type="number" id="valueInput" placeholder="...">
                 </div>
 
-                <div class="alignInput">
-                    <div class="inputExercise">
-                        <label for="valueInput1">3° Number:</label>
-                        <input type="text" id="valueInput3" placeholder="...">
-                    </div>
-
-                    <div class="inputExercise">
-                        <label for="valueInput2">4° Number:</label>
-                        <input type="text" id="valueInput4" placeholder="...">
-                    </div>
-                </div>
-
-                <div class="alignInput">
-                    <div class="inputExercise">
-                        <label for="valueInput1">5° Number:</label>
-                        <input type="text" id="valueInput5" placeholder="...">
-                    </div>
-
-                    <div class="inputExercise">
-                        <label for="valueInput2">6° Number:</label>
-                        <input type="text" id="valueInput6" placeholder="...">
-                    </div>
-                </div>
-
-                <div class="alignInput">
-                    <div class="inputExercise">
-                        <label for="valueInput1">7° Number:</label>
-                        <input type="text" id="valueInput7" placeholder="...">
-                    </div>
-
-                    <div class="inputExercise">
-                        <label for="valueInput2">8° Number:</label>
-                        <input type="text" id="valueInput8" placeholder="...">
-                    </div>
-                </div>
-
+                <button onclick="addGrade()">Add</button>
                 <button onclick="getInputValue()">Calculate!</button>
 
             </div>
 
             <h2 id="result">Average: </h2>
         </div>
+
         <div class="nextExercise">
             <a href="./lista3_ex1.html">Previous</a>
             <a href="./lista3_ex3.html">Next</a>
@@ -100,19 +60,32 @@
     // ex 02: Desenvolva um programa que a partir de um vetor de inteiros com 8 valores inicializados na declaração 
     // apresente a média aritméticas desses valores.
 
+    const grades = [];
+
+    function addGrade() {
+        const inputValue = Number(document.getElementById('valueInput').value);
+
+        if (!isNaN(inputValue) && inputValue > 0 && inputValue < 10.1) {
+            if (grades.length < 8) {
+                grades.push(inputValue);
+                document.getElementById('valueInput').value = '';
+            } else {
+                alert('8 grades have already been entered.');
+                document.getElementById('valueInput').value = '';
+            }
+        } else {
+            alert('Please, enter a valid Rate.');
+            document.getElementById('valueInput').value = '';
+        }
+    }
+
     function getInputValue() {
-        const inputValue1 = parseFloat(document.getElementById('valueInput1').value) || 0;
-        const inputValue2 = parseFloat(document.getElementById('valueInput2').value) || 0;
-        const inputValue3 = parseFloat(document.getElementById('valueInput3').value) || 0;
-        const inputValue4 = parseFloat(document.getElementById('valueInput4').value) || 0;
-        const inputValue5 = parseFloat(document.getElementById('valueInput5').value) || 0;
-        const inputValue6 = parseFloat(document.getElementById('valueInput6').value) || 0;
-        const inputValue7 = parseFloat(document.getElementById('valueInput7').value) || 0;
-        const inputValue8 = parseFloat(document.getElementById('valueInput8').value) || 0;
+        if (grades.length < 8) {
+            alert('Enter 8 grades, please.');
+            return;
+        }
 
-        let numbers = [inputValue1, inputValue2, inputValue3, inputValue4, inputValue5, inputValue6, inputValue7, inputValue8];
-
-        let sum = numbers.reduce((acc, num) => acc + num, 0);
+        let sum = grades.reduce((acc, num) => acc + num, 0);
         let resultFinal = sum / 8;
 
         document.getElementById('result').textContent = `Average: ${resultFinal.toFixed(2)}`;

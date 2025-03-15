@@ -34,25 +34,18 @@
 
             <div class="valuesInsert">
                 <div class="inputExercise">
-                    <label for="valueInput1">First Number:</label>
-                    <input type="text" id="valueInput1" placeholder="...">
+                    <label for="valueInput">Enter a Number:</label>
+                    <input type="number" id="valueInput" placeholder="...">
                 </div>
 
-                <div class="inputExercise">
-                    <label for="valueInput2">Second Number:</label>
-                    <input type="text" id="valueInput2" placeholder="...">
-                </div>
-
-                <div class="inputExercise">
-                    <label for="valueInput3">Third Number:</label>
-                    <input type="text" id="valueInput3" placeholder="...">
-                </div>
-
+                <button onclick="addNumbers()">Add</button>
                 <button onclick="getInputValue()">Check!</button>
+
             </div>
-            
-            <h2 id="result">Numbers in Ascending Order: </h2>
+
+            <h2 id="result">Numbers between 100 and 200: </h2>
         </div>
+
         <div class="nextExercise">
             <a href="./lista3_ex4.html">Previous</a>
             <a href="./lista3_ex6.html">Next</a>
@@ -64,24 +57,36 @@
 </body>
 <script>
     // ex 05: Desenvolva um programa que leia 8 números garantindo que os valores informados estejam entre 100 e 200 
-    // (caso não esteja apresente uma mensagem de “valor inválido”). Depois de preenchido apresente os valores armazenados.
+    // (caso não esteja apresente uma mensagem de “valor inválido”). Depois de preenchido apresente os valores armazenados.
 
+    const verifyNumbers = [];
+
+    function addNumbers() {
+        const inputValue = Number(document.getElementById('valueInput').value);
+
+
+        if (!isNaN(inputValue) && inputValue >= 100 && inputValue <= 200) {
+            if (verifyNumbers.length < 8) {
+                verifyNumbers.push(inputValue);
+                document.getElementById('valueInput').value = '';
+            } else {
+                alert('8 Numbers have already been entered.');
+                document.getElementById('valueInput').value = '';
+            }
+        } else {
+            alert('Please, enter a number between 100 and 200.');
+            document.getElementById('valueInput').value = '';
+        }
+    }
 
     function getInputValue() {
-        const inputValue1 = parseFloat(document.getElementById('valueInput1').value);
-        const inputValue2 = parseFloat(document.getElementById('valueInput2').value);
-        const inputValue3 = parseFloat(document.getElementById('valueInput3').value);
-
-        if (isNaN(inputValue1) || isNaN(inputValue2) || isNaN(inputValue3)) {
-            document.getElementById('result').textContent = "Please, enter a valid number!";
+        if (verifyNumbers.length < 8) {
+            alert('Enter 8 Numbers, please.');
             return;
         }
 
-        let arrayNumbers = [inputValue1, inputValue2, inputValue3]
-        arrayNumbers.sort((a, b) => a - b);
-
-        document.getElementById('result').textContent = `Numbers in Ascending Order: 
-        ${arrayNumbers[0]} | ${arrayNumbers[1]} | ${arrayNumbers[2]}`;
+        document.getElementById('result').textContent = `Numbers between 100 and 200: ${verifyNumbers.join(', ')}`;
+        console.log(verifyNumbers)
     }
 
 </script>

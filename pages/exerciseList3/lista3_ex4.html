@@ -29,21 +29,24 @@
         </nav>
     </header>
     <main>
+
         <div class="finalResult">
             <h1>Result</h1>
 
             <div class="valuesInsert">
                 <div class="inputExercise">
-                    <label for="valueInput">Enter your age:</label>
-                    <input type="text" id="valueInput" placeholder="...">
+                    <label for="valueInput">Enter a Number:</label>
+                    <input type="number" id="valueInput" placeholder="...">
                 </div>
 
+                <button onclick="addNumbers()">Add</button>
                 <button onclick="getInputValue()">Check!</button>
 
             </div>
 
-            <h2 id="result">You are: </h2>
+            <h2 id="result">Even numbers: </h2>
         </div>
+
         <div class="nextExercise">
             <a href="./lista3_ex3.html">Previous</a>
             <a href="./lista3_ex5.html">Next</a>
@@ -57,18 +60,35 @@
     // ex 04: Desenvolva um programa que leia 10 números e apresente os valores pares. 
     // Caso não tenha nenhum número par apresente a mensagem “Todos os números são ímpares.”
 
+    const checkNumbers = [];
+
+    function addNumbers() {
+        const inputValue = Math.abs(Number(document.getElementById('valueInput').value));
+
+
+        if (!isNaN(inputValue)) {
+            if (checkNumbers.length < 10) {
+                checkNumbers.push(inputValue);
+                document.getElementById('valueInput').value = '';
+            } else {
+                alert('10 Numbers have already been entered.');
+                document.getElementById('valueInput').value = '';
+            }
+        } else {
+            alert('Please, enter a valid Number.');
+            document.getElementById('valueInput').value = '';
+        }
+    }
 
     function getInputValue() {
-        const inputValue = Number(document.getElementById('valueInput').value);
-        let result = ""
-
-        if (inputValue < 18) {
-            result = "not eligible to get your driver's license"
-        } else {
-            result = "eligible to get your driver's license"
+        if (checkNumbers.length < 10) {
+            alert('Enter 10 Numbers, please.');
+            return;
         }
 
-        document.getElementById('result').textContent = `You are: ${result}`;
+        const evenNumbers = checkNumbers.filter(n => n % 2 === 0);
+
+        document.getElementById('result').textContent = evenNumbers.length > 0 ? `Even numbers: ${evenNumbers.join(', ')}`: "Todos os números são ímpares.";
     }
 
 </script>
