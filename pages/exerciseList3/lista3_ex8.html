@@ -29,20 +29,25 @@
         </nav>
     </header>
     <main>
+
         <div class="finalResult">
             <h1>Result</h1>
 
             <div class="valuesInsert">
                 <div class="inputExercise">
-                    <label for="valueInput">Enter a Value:</label>
-                    <input type="text" id="valueInput" placeholder="...">
+                    <label for="valueInput">Enter a Number:</label>
+                    <input type="number" id="valueInput" placeholder="...">
                 </div>
 
+                <button onclick="divideNumbers()">Add</button>
                 <button onclick="getInputValue()">Check!</button>
+
             </div>
 
-            <h2 id="result">Square root (0): 0</h2>
+            <h2 id="arrayA">Numbers entered: </h2>
+            <h2 id="result">Numbers divided by 2: </h2>
         </div>
+
         <div class="nextExercise">
             <a href="./lista3_ex7.html">Previous</a>
             <a href="./lista3_ex9.html">Next</a>
@@ -54,22 +59,40 @@
 </body>
 <script>
     // ex 08: Desenvolva um programa que leia 6 números inteiros e armazene em um vetor A. 
-    // Carregue um vetor B (de mesmo tipo e tamanho) com a metade dos valores armazenados em A. 
-    // Apresente os valores dos dois vetores.
+    // Carregue um vetor B (de mesmo tipo e tamanho) com a metade dos valores armazenados em A. 
+    // Apresente os valores dos dois vetores.
 
+    const numbersA = [];
 
-    function getInputValue() {
+    function divideNumbers() {
         const inputValue = Number(document.getElementById('valueInput').value);
 
-        if (isNaN(inputValue) || inputValue < 0) {
-            document.getElementById('result').textContent = `Please, enter a valid number.`;
+        if (!isNaN(inputValue)) {
+            if (numbersA.length < 6) {
+                numbersA.push(inputValue);
+                document.getElementById('valueInput').value = '';
+            } else {
+                alert('6 Numbers have already been entered.');
+                document.getElementById('valueInput').value = '';
+            }
+        } else {
+            alert('Please, enter a number.');
+            document.getElementById('valueInput').value = '';
+        }
+    }
+
+    function getInputValue() {
+        if (numbersA.length < 6) {
+            alert('Enter 6 Numbers, please.');
             return;
         }
 
-        let sqrRoot = Math.sqrt(inputValue);
+        let numbersB = numbersA.map(n => n / 2)
 
-        document.getElementById('result').textContent = `Square root (${inputValue}): ${sqrRoot.toFixed(2)}`;
+        document.getElementById('arrayA').textContent = `Numbers entered: ${numbersA.join(', ')}`;
+        document.getElementById('result').textContent = `Numbers divided by 2: ${numbersB.join(', ')}`;
     }
+
 </script>
 
 </html>

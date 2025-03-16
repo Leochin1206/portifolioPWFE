@@ -34,19 +34,16 @@
 
             <div class="valuesInsert">
                 <div class="inputExercise">
-                    <label for="valueInput">Enter a Value:</label>
+                    <label for="valueInput">Enter a Name:</label>
                     <input type="text" id="valueInput" placeholder="...">
                 </div>
 
                 <button onclick="getInputValue()">Check!</button>
             </div>
 
-            <h2 id="result">Bill Quantities:<br>
-                R$200 = 0 一一一一 R$100 = 0<br>
-                R$50 = 0 一一一一 R$20 = 0<br>
-                R$10 = 0 一一一一 R$5 = 0<br>
-                R$2 = 0 一一一一 R$1 = 0</h2>
+            <h2 id="result">Result: </h2>
         </div>
+
         <div class="nextExercise">
             <a href="./lista3_ex6.html">Previous</a>
             <a href="./lista3_ex8.html">Next</a>
@@ -58,46 +55,24 @@
 </body>
 <script>
     // ex 07: Desenvolva uma nova versão do programa anterior em que o usuário terá a quantidade de tentativas limitada a 5. 
-    // Caso o nome seja encontrado apresente a posição (índice) onde ele está e em qual tentativa ele foi encontrado.
+    // Caso o nome seja encontrado apresente a posição (índice) onde ele está e em qual tentativa ele foi encontrado.
 
+    let attempts = 5;
 
     function getInputValue() {
-        const inputValue = parseInt(document.getElementById('valueInput').value);
+        const names = ["Fernanda", "Marcia", "Dorival", "Modesto", "Lindomar", "Israel", "Daniel", "Miguel", "Lucas", "Kevin",];
+        const inputValue = document.getElementById('valueInput').value;
 
-        if (isNaN(inputValue) || inputValue < 0) {
-            document.getElementById('result').textContent = "Enter a valid Value!";
-            return;
+        if (names.includes(inputValue)) {
+            document.getElementById('result').textContent = `Result: Name ${inputValue} found on ${6 - attempts}° attempt! Your position is ${names.indexOf(inputValue) + 1}° `;
+        } else {
+            attempts--;
+            if (attempts > 0) {
+                document.getElementById('result').textContent = `Result: Name not found! You have ${attempts} attempts left.`;
+            } else {
+                document.getElementById('result').textContent = `Result: No attempts left!`;
+            }
         }
-
-        let amount200 = Math.floor(inputValue / 200);
-        let remainder200 = inputValue % 200;
-
-        let amount100 = Math.floor(remainder200 / 100);
-        let remainder100 = remainder200 % 100;
-
-        let amount50 = Math.floor(remainder100 / 50);
-        let remainder50 = remainder100 % 50;
-
-        let amount20 = Math.floor(remainder50 / 20);
-        let remainder20 = remainder50 % 20;
-
-        let amount10 = Math.floor(remainder20 / 10);
-        let remainder10 = remainder20 % 10;
-
-        let amount5 = Math.floor(remainder10 / 5);
-        let remainder5 = remainder10 % 5;
-
-        let amount2 = Math.floor(remainder5 / 2);
-        let remainder2 = remainder5 % 2;
-
-        let amount1 = remainder2;
-
-        document.getElementById('result').innerHTML =
-            `Bill Quantities:<br>
-        R$200 = ${amount200} 一一一一 R$100 = ${amount100} <br>
-        R$50 = ${amount50} 一一一一 R$20 = ${amount20} <br> 
-        R$10 = ${amount10} 一一一一 R$5 = ${amount5} <br>
-        R$2 = ${amount2} 一一一一 R$1 = ${amount1}`;
     }
 </script>
 

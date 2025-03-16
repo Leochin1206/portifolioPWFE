@@ -29,60 +29,35 @@
         </nav>
     </header>
     <main>
+
         <div class="finalResult">
             <h1>Result</h1>
 
-            <form class="register" onsubmit="return getInputValue(event)">
-                <div class="alignInput">
-                    <div class="inputExercise9">
-                        <label for="valueInputName">Name:</label>
-                        <input type="text" id="valueInputName" placeholder="...">
+            <div class="valuesInsert">
+                <div class="align9">
+                    <div class="alignBox9">
+                        <div class="inputExercise">
+                            <label for="valueInputA">Enter a Number A:</label>
+                            <input type="number" id="valueInputA" placeholder="...">
+                        </div>
+                        <button onclick="addNumbersA()">Add</button>
                     </div>
 
-                    <div class="inputExercise9">
-                        <label for="valueInputAddress">Address:</label>
-                        <input type="text" id="valueInputAddress" placeholder="...">
-                    </div>
-                </div>
-
-                <div class="alignInput">
-                    <div class="sex">
-                        <label>
-                            <input type="radio" name="gender" id="Masculine" value="M"> M
-                        </label>
-
-                        <label>
-                            <input type="radio" name="gender" id="Feminine" value="F"> F
-                        </label>
-                    </div>
-
-                    <div class="inputExercise9">
-                        <label for="valueInputPhoneNumber">Phone Number:</label>
-                        <input type="text" id="valueInputPhoneNumber" placeholder="...">
+                    <div class="alignBox9">
+                        <div class="inputExercise">
+                            <label for="valueInputB">Enter a Number B:</label>
+                            <input type="number" id="valueInputB" placeholder="...">
+                        </div>
+                        <button onclick="addNumbersB()">Add</button>
                     </div>
                 </div>
 
-                <div class="alignInput">
-                    <div class="inputExercise9">
-                        <label for="valueInputCellphone">Cellphone:</label>
-                        <input type="text" id="valueInputCellphone" placeholder="...">
-                    </div>
-
-                    <div class="inputExercise9">
-                        <label for="valueInputEmail">E-mail:</label>
-                        <input type="text" id="valueInputEmail" placeholder="...">
-                    </div>
-                </div>
-
-                <div id="errorMessages"></div>
-
-                <button type="submit">Register!</button>
-            </form>
-
-            <div class="resultMessages">
-                <h2 id="result">Register...</h2>
+                <button onclick="getInputValue()">Check!</button>
             </div>
+
+            <h2 id="result">Alternating numbers A and B: </h2>
         </div>
+
         <div class="nextExercise">
             <a href="./lista3_ex8.html">Previous</a>
         </div>
@@ -93,67 +68,62 @@
 </body>
 <script>
     // ex 09: Desenvolva um programa que leia 5 números inteiros e armazene em um vetor A. 
-    // Leia 5 números inteiros e armazene em um vetor B. 
-    // Carregue e apresente um vetor C com os valores de A e B alternados. 
+    // Leia 5 números inteiros e armazene em um vetor B. 
+    // Carregue e apresente um vetor C com os valores de A e B alternados. 
 
+    const numbersArrayA = [];
+    const numbersArrayB = [];
 
-    function getInputValue(event) {
-        event.preventDefault();
+    function addNumbersA() {
+        const inputValue = Number(document.getElementById('valueInputA').value);
 
-        const errorMessages = document.getElementById('errorMessages');
-        errorMessages.innerHTML = '';
-
-        const valueInputName = document.getElementById('valueInputName').value.trim();
-        const valueInputAddress = document.getElementById('valueInputAddress').value.trim();
-        let selectedGender = document.querySelector('input[name="gender"]:checked')?.value;
-        const valueInputPhoneNumber = document.getElementById('valueInputPhoneNumber').value.trim();
-        const valueInputCellphone = document.getElementById('valueInputCellphone').value.trim();
-        const valueInputEmail = document.getElementById('valueInputEmail').value.trim();
-
-        let allFieldsFilled = true;
-
-        if (!valueInputName) {
-            errorMessages.innerHTML += ' Name is required! ';
-            allFieldsFilled = false;
-        }
-
-        if (!valueInputAddress) {
-            errorMessages.innerHTML += ' Address is required! ';
-            allFieldsFilled = false;
-        }
-
-        if (!selectedGender) {
-            errorMessages.innerHTML += ' Gender is required! ';
-            allFieldsFilled = false;
-        }
-
-        if (!valueInputPhoneNumber) {
-            errorMessages.innerHTML += ' Phone Number is required! ';
-            allFieldsFilled = false;
-        }
-
-        if (!valueInputCellphone) {
-            errorMessages.innerHTML += ' Cellphone is required! ';
-            allFieldsFilled = false;
-        }
-
-        if (!valueInputEmail) {
-            errorMessages.innerHTML += ' E-mail is required! ';
-            allFieldsFilled = false;
-        }
-
-        if (allFieldsFilled) {
-
-            document.getElementById('result').textContent = "Registration completed successfully!";
-            return true;
-
+        if (!isNaN(inputValue)) {
+            if (numbersArrayA.length < 5) {
+                numbersArrayA.push(inputValue);
+                document.getElementById('valueInputA').value = '';
+            } else {
+                alert('5 Numbers A have already been entered.');
+                document.getElementById('valueInputA').value = '';
+            }
         } else {
-
-            document.getElementById('result').textContent = "";
-            return false;
-
+            alert('Please, enter a number.');
         }
     }
+
+    function addNumbersB() {
+        const inputValue = Number(document.getElementById('valueInputB').value);
+
+        if (!isNaN(inputValue)) {
+            if (numbersArrayB.length < 5) {
+                numbersArrayB.push(inputValue);
+                document.getElementById('valueInputB').value = '';
+            } else {
+                alert('5 Numbers B have already been entered.');
+                document.getElementById('valueInputB').value = '';
+            }
+        } else {
+            alert('Please, enter a number.');
+        }
+    }
+
+    function getInputValue() {
+        if (numbersArrayA.length < 5 && numbersArrayB.length < 5) {
+            alert(`Missing ${5 - numbersArrayA.length} numbers A and ${5 - numbersArrayB.length} numbers B, please.`);
+            return;
+        }
+
+        let numbersArrayC = [];
+
+        for (let i = 0; i < 5; i++) {
+            if (i < numbersArrayA.length) numbersArrayC.push(numbersArrayA[i]);
+            if (i < numbersArrayB.length) numbersArrayC.push(numbersArrayB[i]);
+        }
+
+        document.getElementById('result').textContent = `Alternating numbers A and B: ${numbersArrayC.join(', ')}`;
+    }
+
+    console.log(numbersArrayA)
+    console.log(numbersArrayB)
 </script>
 
 </html>
